@@ -1,0 +1,2620 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'UA-140396181-1');
+</script>
+
+
+<title>D&D Character Creator</title>
+<meta name="description" content="Characters instantly for Dungeons and Dragons (D&D) Fifth Edition (5e) and other RPGs tabletop sytems." />
+<meta name="keywords" content="dnd character sheet, dnd character maker, dnd character generator, d&d character maker, dnd character builder, dnd5e characters, dnd maker, dungeons dragons characters, fast character, fast dnd characters, fast d&d characters" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="D&D Character Maker" />
+<meta property="og:description" content="Dungeons and Dragons (D&D) Fifth Edition (5e) Character Creator" />
+<meta property="og:url" content="https://www.realfroggothedoggo.github.io" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="index,follow,noarchive" />
+
+<style type="text/css"><!--
+
+html {padding: 0; margin: 0;}
+
+body {
+	background-color: #a9a197;
+	color: #000;
+	margin: 0; padding: 0;
+	font: normal 9pt/1.2em calibri, arial, helvetica;
+	background-image:url(bkg.full2020.jpg);	
+	background-repeat: repeat-y;
+	background-position:center;
+	text-align: center;
+}
+
+a:link {color: #c63; text-decoration: none; border-bottom: 0px solid #fff;}
+a:visited {color: #c63; text-decoration: none; border-bottom: 0px solid #fff;}
+a:hover {color: #f60; text-decoration: none; border-bottom: 0px solid #f60;}
+a:active {color: #c63; text-decoration: none; border-bottom: 0px solid #fff;}
+
+a.footer:link {color: #000; text-decoration: none; border-bottom: 0px solid #fff;}
+a.footer:visited {color: #000; text-decoration: none; border-bottom: 0px solid #fff;}
+a.footer:hover {color: #ccc; text-decoration: none; border-bottom: 0px solid #c00;}
+a.footer:active {color: #000; text-decoration: none; border-bottom: 0px solid #fff;}
+
+a.btn:link {text-decoration: none; border: 0px;}
+a.btn:visited {text-decoration: none; border: 0px;}
+a.btn:hover {text-decoration: none; border: 0px;}
+a.btn:active {text-decoration: none; border: 0px;}
+
+.wrp {
+	width: 770px; height: 325px;
+	margin-right:auto; margin-left:auto; margin-top: 0px; margin-bottom: 0;
+	padding: 0 10px 10px 10px; 
+	text-align: left;
+	color: #333;
+	}
+	
+.linkset {width: 100%; clear: left; margin: 0; padding: 0; font: bold 11px/1.2em arial, helvetica; color: #666; text-align: center;}
+
+.formset {width: 100%; padding: 0; margin: 0;}
+.formset h2 {padding: 2px 0 2px 0; font: bold 14px/1.2em arial, helvetica; color: #666; border-top: 1px #999 solid;}
+
+.logo {float: left; margin: 0 5px 0 0;}
+.customization {color: #cdb5a3;}
+
+#heddnd {margin: 0; padding: 0; width: 586px; background-image:url(heddnd.png); background-repeat: no-repeat;}
+.h01 {padding: 0;}
+.h02 {padding: 0; font: bold 12pt/1.2em calibri arial, helvetica; color: #333; text-align: left;}
+.h03 {padding: 0; font: bold 9pt/1.2em calibri arial, helvetica; color: #cc9966; text-align: center;}
+.h04 {padding: 0 0 0 15px; font: normal 8pt/1.2em calibri arial, helvetica; color: #666;}
+
+td {padding: 2px 10px 2px 2px; font: normal 10pt/1.2em calibri, arial, helvetica;}
+select {font: normal 9pt/1.2em calibri, arial, helvetica; color: #000; background-color: #f2e8da; border: 1px #666 solid;}
+input {margin: 2px; font: normal 9pt/1.2em calibri, arial, helvetica; color: #000; background-color: #f2e8da; border: 1px #666 solid;}
+textarea {margin: 2px; padding: 2px 5px; font: normal 11pt/1.2em calibri, arial, helvetica; color: #000; background-color: #f2e8da; border: 1px #666 solid;}
+.subbtn {margin: 15px 0px; padding: 5px 15px; font: bold 14px/1.2em arial, helvetica; 
+	color: #fff; background-color: #aaa69c;
+	border: 1px solid #fff;		
+	-webkit-box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.25); 
+	box-shadow: 3px 3px 15px 5px rgba(0,0,0,0.25);	
+	}
+
+.logo {padding: 0;}
+.book {padding: 10px 0 0 10px;}
+.abilitypick {text-align: left; padding: 3px 1px 3px 100px;}
+
+#nav {width: 100%; margin: 15px 0 0 0; padding: 0;
+	text-align: center; color: #a28e7f; 
+	}	
+	
+#nav td {padding: 0 2px 0 0; color: #a28e7f; font: italic 9pt/1.2em calibri arial, helvetica;}
+.nav01 {padding: 0; text-algin: center; border-top: 1px solid #d9c3b2;}
+.nav01x {padding: 0; text-algin: center; border-top: 5px solid #d9c3b2;}
+.nav02 {padding: 0 2px 0 2px; font: bold 10pt/1.4em calibri arial, helvetica;}
+.nav03 {padding: 1px 2px 1px 2px; color: #666666; font: italic 9pt/1.2em calibri arial, helvetica;}
+
+.teaser {
+	padding: 15px;
+	text-align: left; color: #666;
+	font: italic 13pt/1.0em times, "times new roman", arial, helvetica;
+	}
+.teaserline {font: bold 13pt/1.0em arial, helvetica;}
+.new {
+	padding: 15px;
+	text-align: center; color: #900;
+	font: bold 13pt/1.0em times, "times new roman", arial, helvetica;
+	}
+
+.custom {margin: 1px; padding: 1px;}
+
+hr {
+  margin: 10px 0 10px 0;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0)); 
+  background-image:  -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0)); 
+  background-image:   -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0)); 
+  background-image:   -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.33), rgba(0,0,0,0)); 
+}
+
+
+#footer {
+	width: 730px; margin: 0; padding: 10px 0 20px 0;
+	text-align: left; color: #333;
+	font: normal 10px/1.0em Verdana, Arial, Helvetica;	
+	}
+
+--></style>
+
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2VLBSSR5GJ');
+</script>
+
+</head>
+<body><div class="wrp">
+
+<tr><td colspan="2"><hr /></td></tr>
+
+<tr>
+
+<td align="right"><select name="pcrace" tabindex="7">
+<option value="0" selected>Race/Ancestry/Heritage (Source)...</option>
+<option value="randphb"> (random, Player's Handbook only) </option>
+<option value="0"> (random, all sources) </option>
+<option value="0"> -------------- </option>
+<option value="human">Human (PHB)</option>
+<option value="humanvariant">Human (variant build option) (PHB)</option>
+<option value="aarakocraMotM">Aarakocra (birdfolk) (MotM)</option>
+<option value="aasimarMotM">Aasimar (celestial blooded) (MotM)</option>
+<option value="autognome">Autognome (robot) (SJAiS)</option>
+<option value="bugbearMotM">Bugbear (MotM)</option>
+<option value="bullywug">Bullywug (frogfolk) (NPC) (DMG)</option>
+<option value="centaurMotM">Centaur (half human, half horse) (MotM)</option>
+<option value="changelingMotM">Changeling (doppelganger-kin) (MotM)</option>
+<option value="dhampir">Dhampir (half human, half vampire) (VRGtR)</option>
+<option value="dragonbornblack">Dragonborn (Black Dragon Ancestry) (PHB)</option>
+<option value="dragonbornblue">Dragonborn (Blue Dragon Ancestry) (PHB)</option>
+<option value="dragonbornbrass">Dragonborn (Brass Dragon Ancestry) (PHB)</option>
+<option value="dragonbornbronze">Dragonborn (Bronze Dragon Ancestry) (PHB)</option>
+<option value="dragonborncopper">Dragonborn (Copper Dragon Ancestry) (PHB)</option>
+<option value="dragonborngold">Dragonborn (Gold Dragon Ancestry) (PHB)</option>
+<option value="dragonborngreen">Dragonborn (Green Dragon Ancestry) (PHB)</option>
+<option value="dragonbornred">Dragonborn (Red Dragon Ancestry) (PHB)</option>
+<option value="dragonbornsilver">Dragonborn (Silver Dragon Ancestry) (PHB)</option>
+<option value="dragonbornwhite">Dragonborn (White Dragon Ancestry) (PHB)</option>
+<option value="dwarfduergarMotM">Dwarf (Duergar) (MotM)</option>
+<option value="dwarfhill">Dwarf (Hill Dwarf) (PHB)</option>
+<option value="dwarfmountain">Dwarf (Mountain Dwarf) (PHB)</option>
+<option value="elfeladrinMotM">Eladrin (Feywild elf) (MotM)</option>
+<option value="elfastral">Elf (Astral Elf) (dream realm) (SJAiS)</option>
+<option value="elfdrow">Elf (Dark Elf/Drow) (PHB)</option>
+<option value="elfhigh">Elf (High Elf) (PHB)</option>
+<option value="elfseaMotM">Elf (Sea Elf) (MotM)</option>
+<option value="elfshadarkaiMotM">Elf (Shadow Elf/Shadar-kai) (MotM)</option>
+<option value="elfwood">Elf (Wood Elf) (PHB)</option>
+<option value="fairyMotM">Fairy (feyfolk) (MotM)</option>
+<option value="firbolgMotM">Firbolg (forest giant) (MotM)</option>
+<option value="genasiairMotM">Genasi (air genie kin) (MotM)</option>
+<option value="genasiearthMotM">Genasi (earth genie kin) (MotM)</option>
+<option value="genasifireMotM">Genasi (fire genie kin) (MotM)</option>
+<option value="genasiwaterMotM">Genasi (water genie kin) (MotM)</option>
+<option value="giff">Giff (hippofolk) (SJAiS)</option>
+<option value="githyankiMotM">Githyanki (astral knighthood) (MotM)</option>
+<option value="githzeraiMotM">Githzerai (planar monastic) (MotM)</option>
+<option value="gnoll">Gnoll (hyenafolk) (NPC) (DMG)</option>
+<option value="gnomedeepMotM">Gnome (deep gnome/Svirfneblin) (MotM)</option>
+<option value="gnomeforest">Gnome (Forest Gnome) (PHB)</option>
+<option value="gnomerock">Gnome (Rock Gnome) (PHB)</option>
+<option value="goblinMotM">Goblin (MotM)</option>
+<option value="goliathMotM">Goliath (giant blooded) (MotM)</option>
+<option value="grimlock">Grimlock (NPC) (DMG)</option>
+<option value="hadozee">Hadozee (simian gliders) (UA)</option>
+<option value="halfelf">Half-Elf (PHB)</option>
+<option value="halforc">Half-Orc (PHB)</option>
+<option value="halflinglightfoot">Halfling (Lightfoot) (PHB)</option>
+<option value="halflingstout">Halfling (Stout) (PHB)</option>
+<option value="harengonMotM">Harengon (rabbitfolk) (MotM)</option>
+<option value="hexblood">Hexblood (hag-blooded human) (VRGtR)</option>
+<option value="hobgoblinMotM">Hobgoblin (MotM)</option>
+<option value="kalashtar">Kalashtar (host to dream spirit) (ERftLW)</option>
+<option value="kenkuMotM">Kenku (ravenfolk) (MotM)</option>
+<option value="koboldMotM">Kobold (MotM)</option>
+<option value="kuotoa">Kuo-toa (underdark fishfolk) (NPC) (DMG)</option>
+<option value="leonin">Leonin (lionfolk) (MOoT)</option>
+<option value="lizardfolkMotM">Lizardfolk ("reptiloids") (MotM)</option>
+<option value="loxodon">Loxodon (elephantfolk) (GGtR)</option>
+<option value="merfolk">Merfolk (mortal seafolk) (NPC) (DMG)</option>
+<option value="minotaurMotM">Minotaur (bullfolk) (MotM)</option>
+<option value="orcMotM">Orc (MotM)</option>
+<option value="owlin">Owlin (owlfolk) (SCoC)</option>
+<option value="plasmoid">Plasmoid (oozefolk) (SJAiS)</option>
+<option value="reborn">Reborn (construct or undead) (VRGtR)</option>
+<option value="roguemodron">Rogue Modron (quadrone) (MM)</option>
+<option value="saytrMotM">Saytr (aka Faun) (MotM)</option>
+<option value="shifterbeasthideMotM">Shifter (Beasthide) (MotM)</option>
+<option value="shifterlongtoothMotM">Shifter (Longtooth) (MotM)</option>
+<option value="shifterswiftstrideMotM">Shifter (Swiftstride) (MotM)</option>
+<option value="shifterwildhuntMotM">Shifter (Wildhunt) (MotM)</option>
+<option value="skeleton">Skeleton (NPC) (DMG)</option>
+<option value="tabaxiMotM">Tabaxi (catfolk) (MotM)</option>
+<option value="thrikreen">Thri-Kreen (telepathic insectfolk) (SJAiS)</option>
+<option value="tiefling">Tiefling (fiend blooded) (PHB)</option>
+<option value="tortleMotM">Tortle (turtlefolk) (MotM)</option>
+<option value="tritonMotM">Triton (extraplanar seafolk) (MotM)</option>
+<option value="troglodyte">Troglodyte (NPC) (DMG)</option>
+<option value="vampire">Vampire (human origin) (MM)</option>
+<option value="warforged">Warforged (living constructs) (ERftLW)</option>
+<option value="werebear">Werebear (human lycanthrope) (MM)</option>
+<option value="wereboar">Wereboar (human lycanthrope) (MM)</option>
+<option value="wererat">Wererat (human lycanthrope) (MM)</option>
+<option value="weretiger">Weretiger (human lycanthrope) (MM)</option>
+<option value="werewolf">Werewolf (human lycanthrope) (MM)</option>
+<option value="yuantiMotM">Yuan-ti (snakefolk) (MotM)</option>
+<option value="zombie">Zombie (NPC) (DMG)</option>
+<option value="0"></option>
+<option value="0">-- PREVIOUS RULES VERSIONS --</option>
+<option value="0">-- (before "Monsters of the Multiverse") --</option>
+<option value="aarakocra">Aarakocra (birdfolk) (EEPG)</option>
+<option value="aasimar">Aasimar (celestial blooded) (DMG)</option>
+<option value="aasimarfallen">Aasimar (Fallen celestial) (VGtM)</option>
+<option value="aasimarprotector">Aasimar (Protector celestial) (VGtM)</option>
+<option value="aasimarscourge">Aasimar (Scourge celestial) (VGtM)</option>
+<option value="bugbear">Bugbear (VGtM)</option>
+<option value="centaur">Centaur (half human, half horse) (UA)</option>
+<option value="centaurtheros">Centaur (Theros-born) (MOoT)</option>
+<option value="changeling">Changeling (doppelganger-kin) (ERftLW)</option>
+<option value="dwarfduergar">Dwarf (Duergar) (MToF)</option>
+<option value="elfeladrin">Eladrin (Feywild elf) (DMG)</option>
+<option value="elfeladrinseasons">Eladrin (of the Seasons) (MToF)</option>
+<option value="elfsea">Elf (Sea Elf) (MToF)</option>
+<option value="elfshadarkai">Elf (Shadow Elf/Shadar-kai) (MToF)</option>
+<option value="fairy">Fairy (feyfolk) (WBtW)</option>
+<option value="firbolg">Firbolg (forest giant) (VGtM)</option>
+<option value="genasiair">Genasi (air blooded) (EEPG)</option>
+<option value="genasiearth">Genasi (earth blooded) (EEPG)</option>
+<option value="genasifire">Genasi (fire blooded) (EEPG)</option>
+<option value="genasiwater">Genasi (water blooded) (EEPG)</option>
+<option value="githyanki">Githyanki (astral knighthood) (MToF)</option>
+<option value="githzerai">Githzerai (planar monastic) (MToF)</option>
+<option value="gnomedeep">Gnome (deep gnome/Svirfneblin) (MToF)</option>
+<option value="goblin">Goblin (VGtM)</option>
+<option value="goliath">Goliath (giant blooded) (VGtM)</option>
+<option value="harengon">Harengon (rabbitfolk) (WBtW)</option>
+<option value="hobgoblin">Hobgoblin (VGtM)</option>
+<option value="kobold">Kobold (VGtM)</option>
+<option value="lizardfolk">Lizardfolk (VGtM)</option>
+<option value="minotaur">Minotaur (Krynn-born) (UA)</option>
+<option value="minotaurtheros">Minotaur (Theros-born) (MOoT)</option>
+<option value="orc">Orc (VGtM)</option>
+<option value="saytrtheros">Saytr (aka Faun) (MOoT)</option>
+<option value="shifterbeasthide">Shifter (Beasthide) (UA)</option>
+<option value="shiftercliffwalk">Shifter (Cliffwalk) (UA)</option>
+<option value="shifterlongstride">Shifter (Longstride) (UA)</option>
+<option value="shifterlongtooth">Shifter (Longtooth) (UA)</option>
+<option value="shifterrazorclaw">Shifter (Razorclaw) (UA)</option>
+<option value="shifterwildhunt">Shifter (Wildhunt) (UA)</option>
+<option value="tabaxi">Tabaxi (catfolk) (VGtM)</option>
+<option value="tieflingasmodeus">Tiefling (of Asmodeus) (MToF)</option>
+<option value="tieflingbaalzebul">Tiefling (of Baalzebul) (MToF)</option>
+<option value="tieflingdispater">Tiefling (of Dispater) (MToF)</option>
+<option value="tieflingfierna">Tiefling (of Fierna) (MToF)</option>
+<option value="tieflingglasya">Tiefling (of Glasya) (MToF)</option>
+<option value="tieflingmammon">Tiefling (of Mammon) (MToF)</option>
+<option value="tieflingmephistopheles">Tiefling (of Mephistopheles) (MToF)</option>
+<option value="tieflingzariel">Tiefling (of Zariel) (MToF)</option>
+<option value="tortle">Tortle (turtlefolk) (TP)</option>
+<option value="triton">Triton (extraplanar seafolk) (VGtM)</option>
+<option value="yuanti">Yuan-ti Pureblood (snakefolk) (VGtM)</option>
+<option value="0"></option>
+<option value="0">-- UNOFFICIAL HOMEBREWS --</option>
+<option value="androidrobot">Android / Robot (sentient construct)</option>
+<option value="bariaur">Bariaur (2e ram/ewe nomads, centaurlike)</option>
+<option value="brownie">Brownie (1e lawful halfling/pixie)</option>
+<option value="deva">Deva (4e immortal spirit)</option>
+<option value="leprechaun">Leprechaun (1e chaotic halfling/pixie)</option>
+<option value="hamadryad">Hamadryad (4e wood spirit)</option>
+<option value="shardmind">Shardmind (4e psi crystal being)</option>
+</select></td>
+
+<td align="left"><select name="pcgender" tabindex="6">
+<option value="0" selected>Character Gender For Name...</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="they">They and other non-binaries</option>
+</select></td>
+
+</tr>
+<tr>
+
+<td align="right"><select name="pcclass" tabindex="8">
+<option value="0" selected>Class (Source)...</option>
+<option value="randphb"> (random, Player's Handbook only) </option>
+<option value="0"> (random, all sources) </option>
+<option value="0"> -------------- </option>
+<option value="ArtificerAlchemist">Artificer (Alchemist) (TCoE)</option>
+<option value="ArtificerArmorer">Artificer (Armorer) (TCoE)</option>
+<option value="ArtificerArtillerist">Artificer (Artillerist) (TCoE)</option>
+<option value="ArtificerBattleSmith">Artificer (Battle Smith) (TCoE)</option>
+<option value="ArtificerOther">Artificer (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="BarbarianAncestral">Barbarian (Ancestral Guardian) (XGtE)</option>
+<option value="BarbarianBeast">Barbarian (Path of the Beast) (TCoE)</option>
+<option value="BarbarianBerserker">Barbarian (Berserker) (PHB)</option>
+<option value="BarbarianStorm">Barbarian (Storm Herald) (XGtE)</option>
+<option value="BarbarianTotemBear">Barbarian (Bear Totem Warrior) (PHB)</option>
+<option value="BarbarianTotemEagle">Barbarian (Eagle Totem Warrior) (PHB)</option>
+<option value="BarbarianTotemWolf">Barbarian (Wolf Totem Warrior) (PHB)</option>
+<option value="BarbarianWildMagic">Barbarian (Wild Magic) (TCoE)</option>
+<option value="BarbarianZealot">Barbarian (Zealot) (XGtE)</option>
+<option value="BarbarianOther">Barbarian (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="BardCreation">Bard (College of Creation) (TCoE)</option>
+<option value="BardEloquence">Bard (College of Eloquence) (TCoE)</option>
+<option value="BardGlamour">Bard (College of Glamour) (XGtE)</option>
+<option value="BardLore">Bard (College of Lore) (PHB)</option>
+<option value="BardSword">Bard (College of Swords) (XGtE)</option>
+<option value="BardValor">Bard (College of Valor) (PHB)</option>
+<option value="BardWhispers">Bard (College of Whispers) (XGtE)</option>
+<option value="BardOther">Bard (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="ClericDeath">Cleric (Domain of Death) (DMG)</option>
+<option value="ClericForge">Cleric (Domain of the Forge) (XGtE)</option>
+<option value="ClericGrave">Cleric (Domain of the Grave) (XGtE)</option>
+<option value="ClericKnowledge">Cleric (Domain of Knowledge) (PHB)</option>
+<option value="ClericLife">Cleric (Domain of Life) (PHB)</option>
+<option value="ClericLight">Cleric (Domain of Light) (PHB)</option>
+<option value="ClericNature">Cleric (Domain of Nature) (PHB)</option>
+<option value="ClericOrder">Cleric (Domain of Order) (TCoE)</option>
+<option value="ClericPeace">Cleric (Domain of Peace) (TCoE)</option>
+<option value="ClericTempest">Cleric (Domain of Tempest) (PHB)</option>
+<option value="ClericTrickery">Cleric (Domain of Trickery) (PHB)</option>
+<option value="ClericTwilight">Cleric (Domain of Twilight) (TCoE)</option>
+<option value="ClericWar">Cleric (Domain of War) (PHB)</option>
+<option value="ClericCity">Cleric (Dom. of the Modern City) (UA:MM)</option>
+<option value="ClericOther">Cleric (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="DruidArctic">Druid (Circle of the Arctic) (PHB)</option>
+<option value="DruidCoastal">Druid (Circle of the Coastal) (PHB)</option>
+<option value="DruidDesert">Druid (Circle of the Desert) (PHB)</option>
+<option value="DruidDreams">Druid (Circle of Dreams) (XGtE)</option>
+<option value="DruidForest">Druid (Circle of the Forest) (PHB)</option>
+<option value="DruidGrassland">Druid (Circle of the Grassland) (PHB)</option>
+<option value="DruidMoon">Druid (Circle of the Moon) (PHB)</option>
+<option value="DruidMountain">Druid (Circle of the Mountain) (PHB)</option>
+<option value="DruidShepherd">Druid (Circle of the Shepherd) (XGtE)</option>
+<option value="DruidSpores">Druid (Circle of Spores) (TCoE)</option>
+<option value="DruidStars">Druid (Circle of Stars) (TCoE)</option>
+<option value="DruidSwamp">Druid (Circle of the Swamp) (PHB)</option>
+<option value="DruidUnderdark">Druid (Circle of the Underdark) (PHB)</option>
+<option value="DruidWildfire">Druid (Circle of Wildfire) (TCoE)</option>
+<option value="DruidOther">Druid (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="FighterArcaneArcher">Fighter (Arcane Archer/Dex-based) (XGtE)</option>
+<option value="FighterBattleMasterDEX">Fighter (Battle Master/Dex-based) (PHB)</option>
+<option value="FighterBattleMasterSTR">Fighter (Battle Master/Str-based) (PHB)</option>
+<option value="FighterCavalierDEX">Fighter (Cavalier/Dex-based) (XGtE)</option>
+<option value="FighterCavalierSTR">Fighter (Cavalier/Str-based) (XGtE)</option>
+<option value="FighterChampionDEX">Fighter (Champion/Dex-based) (PHB)</option>
+<option value="FighterChampionSTR">Fighter (Champion/Str-based) (PHB)</option>
+<option value="FighterEldritchKnightDEX">Fighter (Eldritch Knight/Dex-based) (PHB)</option>
+<option value="FighterEldritchKnightSTR">Fighter (Eldritch Knight/Str-based) (PHB)</option>
+<option value="FighterPsiWarriorDEX">Fighter (Psi Warrior/Dex-based) (TCoE)</option>
+<option value="FighterPsiWarriorSTR">Fighter (Psi Warrior/Str-based) (TCoE)</option>
+<option value="FighterRuneKnight">Fighter (Rune Knight/Str-based) (TCoE)</option>
+<option value="FighterSamuraiDEX">Fighter (Samurai/Dex-based) (XGtE)</option>
+<option value="FighterSamuraiSTR">Fighter (Samurai/Str-based) (XGtE)</option>
+<option value="FighterOtherDEX">Fighter (Other Subclass, Dexterity-based)</option>
+<option value="FighterOtherSTR">Fighter (Other Subclass, Strength-based)</option>
+<option value="0"> -------------- </option>
+<option value="MonkAstralSelf">Monk (Way of the Astral Self) (TCoE)</option>
+<option value="MonkDrunkenMaster">Monk (Way of the Drunken Master) (XGtE)</option>
+<option value="MonkFourElements">Monk (Way of the Four Elements) (PHB)</option>
+<option value="MonkKensei">Monk (Way of the Kensei) (XGtE)</option>
+<option value="MonkMercy">Monk (Way of Mercy) (TCoE)</option>
+<option value="MonkOpenHand">Monk (Way of the Open Hand) (PHB)</option>
+<option value="MonkShadow">Monk (Way of Shadow) (PHB)</option>
+<option value="MonkSunSoul">Monk (Way of the Sun Soul) (XGtE)</option>
+<option value="MonkOther">Monk (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="PaladinAncients">Paladin (Oath of the Ancients) (PHB)</option>
+<option value="PaladinConquest">Paladin (Oath of Conquest) (XGtE)</option>
+<option value="PaladinDevotion">Paladin (Oath of Devotion) (PHB)</option>
+<option value="PaladinGlory">Paladin (Oath of Glory) (TCoE)</option>
+<option value="PaladinOathbreaker">Paladin (Oathbreaker, "Anti-Paladin") (DMG)</option>
+<option value="PaladinRedemption">Paladin (Oath of Redemption) (XGtE)</option>
+<option value="PaladinVengeance">Paladin (Oath of Vengeance) (PHB)</option>
+<option value="PaladinWatchers">Paladin (Oath of the Watchers) (TCoE)</option>
+<option value="PaladinOther">Paladin (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="RangerBeastMaster">Ranger (Beast Master) (PHB)</option>
+<option value="RangerFeyWanderer">Ranger (Fey Wanderer) (TCoE)</option>
+<option value="RangerGloomStalker">Ranger (Gloom Stalker) (XGtE)</option>
+<option value="RangerHorizonWalker">Ranger (Horizon Walker) (XGtE)</option>
+<option value="RangerHunter">Ranger (Hunter) (PHB)</option>
+<option value="RangerMonsterSlayer">Ranger (Monster Slayer) (XGtE)</option>
+<option value="RangerSwarmKeeper">Ranger (Swarm Keeper) (TCoE)</option>
+<option value="RangerOther">Ranger (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="RogueArcaneTrickster">Rogue (Arcane Trickster) (PHB)</option>
+<option value="RogueAssassin">Rogue (Assassin) (PHB)</option>
+<option value="RogueInquisitive">Rogue (Inquisitive) (XGtE)</option>
+<option value="RogueMastermind">Rogue (Mastermind) (XGtE)</option>
+<option value="RoguePhantom">Rogue (Phantom) (TCoE)</option>
+<option value="RogueScout">Rogue (Scout) (XGtE)</option>
+<option value="RogueSoulknife">Rogue (Soulknife) (TCoE)</option>
+<option value="RogueSwashbuckler">Rogue (Swashbuckler) (XGtE)</option>
+<option value="RogueThief">Rogue (Thief) (PHB)</option>
+<option value="RogueOther">Rogue (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="SorcererAberrantMind">Sorcerer (Aberrant Mind) (TCoE)</option>
+<option value="SorcererClockworkSoul">Sorcerer (Clockwork Soul) (TCoE)</option>
+<option value="SorcererDivineSoul">Sorcerer (Divine Soul) (XGtE)</option>
+<option value="SorcererDraconic">Sorcerer (Draconic Bloodline) (PHB)</option>
+<option value="SorcererShadowMagic">Sorcerer (Shadow Magic) (XGtE)</option>
+<option value="SorcererStormSorcery">Sorcerer (Storm Sorcery) (XGtE)</option>
+<option value="SorcererWildMagic">Sorcerer (Wild Magic) (PHB)</option>
+<option value="SorcererOther">Sorcerer (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="WarlockArchfey">Warlock (The Archfey) (PHB)</option>
+<option value="WarlockCelestial">Warlock (The Celestial) (XGtE)</option>
+<option value="WarlockFathomless">Warlock (The Fathomless) (TCoE)</option>
+<option value="WarlockFiend">Warlock (The Fiend) (PHB)</option>
+<option value="WarlockGenieAir">Warlock (Genie/Air Djinni) (TCoE)</option>
+<option value="WarlockGenieEarth">Warlock (Genie/Earth Dao) (TCoE)</option>
+<option value="WarlockGenieFire">Warlock (Genie/Fire Efreeti) (TCoE)</option>
+<option value="WarlockGenieWater">Warlock (Genie/Water Marid) (TCoE)</option>
+<option value="WarlockGreatOldOne">Warlock (Great Old One) (PHB)</option>
+<option value="WarlockHexblade">Warlock (Hexblade) (XGtE)</option>
+<option value="WarlockGhostInTheMachine">Warlock (Ghost In The Machine) (UA:MM)</option>
+<option value="WarlockOther">Warlock (Other Custom Subclass)</option>
+<option value="0"> -------------- </option>
+<option value="WizardAbjuration">Wizard (Abjuration Tradition) (PHB)</option>
+<option value="WizardBladesinging">Wizard (Bladesinging) (TCoE)</option>
+<option value="WizardConjuration">Wizard (Conjuration Tradition) (PHB)</option>
+<option value="WizardDivination">Wizard (Divination Tradition) (PHB)</option>
+<option value="WizardEnchantment">Wizard (Enchantment Tradition) (PHB)</option>
+<option value="WizardEvocation">Wizard (Evocation Tradition) (PHB)</option>
+<option value="WizardIllusion">Wizard (Illusion Tradition) (PHB)</option>
+<option value="WizardNecromancy">Wizard (Necromancy Tradition) (PHB)</option>
+<option value="WizardScribes">Wizard (Order of Scribes) (TCoE)</option>
+<option value="WizardTransmutation">Wizard (Transmutation Tradition) (PHB)</option>
+<option value="WizardWarMage">Wizard (War Mage) (XGtE)</option>
+<option value="WizardWarMageSummoner">Wizard (War Mage/Summoner) (XGtE)</option>
+<option value="WizardTechnomancer">Wizard (Technomancer) (UA:MM)</option>
+<option value="WizardOther">Wizard (Other Custom Subclass)</option>
+</select></td>
+<td align="left"><select name="pclevel" tabindex="9"> 
+<option value="0" selected>Level...</option>
+<option value="1">Level 1 (0 x.p.)</option>
+<option value="2">Level 2 (300 x.p.)</option>
+<option value="3">Level 3 (900 x.p.)</option>
+<option value="4">Level 4 (2,700 x.p.)</option>
+<option value="5">Level 5 (6,500 x.p.)</option>
+<option value="6">Level 6 (14,000 x.p.)</option>
+<option value="7">Level 7 (23,000 x.p.)</option>
+<option value="8">Level 8 (34,000 x.p.)</option>
+<option value="9">Level 9 (48,000 x.p.)</option>
+<option value="10">Level 10 (64,000 x.p.)</option>
+<option value="11">Level 11 (85,000 x.p.)</option>
+<option value="12">Level 12 (100,000 x.p.)</option>
+<option value="13">Level 13 (120,000 x.p.)</option>
+<option value="14">Level 14 (140,000 x.p.)</option>
+<option value="15">Level 15 (165,000 x.p.)</option>
+<option value="16">Level 16 (195,000 x.p.)</option>
+<option value="17">Level 17 (225,000 x.p.)</option>
+<option value="18">Level 18 (265,000 x.p.)</option>
+<option value="19">Level 19 (305,000 x.p.)</option>
+<option value="20">Level 20 (355,000 or more x.p.)</option>
+</select></td>
+</tr>
+
+<tr>
+<td align="right"><select name="pcbkgrd" tabindex="10">
+<option value="0" selected>Background...</option>
+<option value="match">(match to fit Class)</option>
+<option value="Acolyte">Acolyte (PHB)</option>
+<option value="Charlatan">Charlatan (PHB)</option>
+<option value="Criminal">Criminal (PHB)</option>
+<option value="Entertainer">Entertainer (PHB)</option>
+<option value="FolkHero">Folk Hero (PHB)</option>
+<option value="Gladiator">Gladiator (PHB)</option>
+<option value="GuildArtisan">Guild Artisan (PHB)</option>
+<option value="GuildMerchant">Guild Merchant (PHB)</option>
+<option value="Hermit">Hermit (PHB)</option>
+<option value="Knight">Knight (PHB)</option>
+<option value="Noble">Noble (PHB)</option>
+<option value="Outlander">Outlander (PHB)</option>
+<option value="Pirate">Pirate (PHB)</option>
+<option value="Sage">Sage (PHB)</option>
+<option value="Sailor">Sailor (PHB)</option>
+<option value="Soldier">Soldier (PHB)</option>
+<option value="Spy">Spy (PHB)</option>
+<option value="Urchin">Urchin (PHB)</option>
+</select></td>
+
+<td align="left"><select name="pcalignment" tabindex="11">
+<option value="0" selected>Alignment...</option>
+<option value="no">(random, but no evil characters)</option>
+<option value="yes">(random, evil characters allowed)</option>
+<option value="LG">Lawful Good</option>
+<option value="NG">Neutral Good</option>
+<option value="CG">Chaotic Good</option>
+<option value="LN">Lawful Neutral</option>
+<option value="TN">True Neutral</option>
+<option value="CN">Chaotic Neutral</option>
+<option value="LE">Lawful Evil</option>
+<option value="NE">Neutral Evil</option>
+<option value="CE">Chaotic Evil</option>
+</select></td>
+</tr>
+
+
+<tr><td colspan="2"><hr /></td></tr>
+
+<tr><td align="center" colspan="2"><strong>Describe Your Character:</strong></td></tr>
+<tr><td align="right">Personality&nbsp;Trait #1:&nbsp;<input type="text" name="custTrait02" size="25"></td>
+<td align="left">Ideal:&nbsp;<input type="text" name="custIdeal" size="25"></td></tr>
+<tr><td align="right">Personality&nbsp;Trait #2:&nbsp;<input type="text" name="custTrait01" size="25"></td>
+<td align="left">Bond:&nbsp;<input type="text" name="custBond" size="25"></td></tr>
+<tr><td align="right">&nbsp;</td>
+<td align="left">Flaw:&nbsp;<input type="text" name="custFlaw" size="25"></td></tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+
+<tr>
+<td align="right"><select name="pcformat" tabindex="13">
+<option value="standard" selected>Display Format...</option>
+<option value="standard">-- VERTICAL LAYOUT --</option>
+<option value="standard">Color Character Sheet - Portrait</option>
+<option value="plain">Grayscale Character Sheet - Portrait</option>
+<option value="horizontalcolor">-- HORIZONTAL LAYOUT --</option>
+<option value="horizontalcolor">Color Character Sheet - Landscape</option>
+<option value="horizontalgray">Grayscale Character Sheet - Landscape</option>
+
+</select></td>
+
+</tr>
+
+<tr>
+<td colspan="2" align="center" ><input class="subbtn" type="submit" name="submit" value="CLICK TO CREATE CHARACTER" tabindex="14" /></td>
+</tr>
+
+<tr><td colspan="2" align="center"><hr /><hr /></td></tr>
+<tr><td colspan="2" align="center"><em>The menus below are for advanced players using optional rules.<br />Check with your DM for approval before using in your group's campaign.</td></tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+<tr><td colspan="2" align="center"><strong>C&nbsp;U&nbsp;S&nbsp;T&nbsp;O&nbsp;M&nbsp; &nbsp; A&nbsp;B&nbsp;I&nbsp;L&nbsp;I&nbsp;T&nbsp;Y&nbsp; &nbsp;S&nbsp;C&nbsp;O&nbsp;R&nbsp;E&nbsp;S</strong></td></tr>
+<tr>
+<td colspan="2" align="center"><select name="pointBuy">
+<option value="15x14x13x12x10x8" selected>Optional Rule: Variant Custom Ability Scores...</option>
+<option value="15x14x13x12x10x8">-- PLAYER'S HANDBOOK (p. 12-13) --</option>
+<option value="15x14x13x12x10x8">Use the default standard set (15, 14, 13, 12, 10, 8)</option>
+<option value="rolled">Or, generate weighted scores randomly (four 6-sided dice, drop lowest roll per ability score)</option>
+<option value="random">Or, generate scores very randomly (three 6-sided dice, assigned as rolled)</option>
+<option value="15x14x13x12x10x8">Or, use one of the "27-point buy" sets...</option>
+<option value="15x15x15x8x8x8">* 15, 15, 15, 8, 8, 8</option>
+<option value="15x15x14x10x8x8">* 15, 15, 14, 10, 8, 8</option>
+<option value="15x15x14x9x9x8">* 15, 15, 14, 9, 9, 8</option>
+<option value="15x15x13x12x8x8">* 15, 15, 13, 12, 8, 8</option>
+<option value="15x15x13x11x9x8">* 15, 15, 13, 11, 9, 8</option>
+<option value="15x15x13x10x10x8">* 15, 15, 13, 10, 10, 8</option>
+<option value="15x15x13x10x9x9">* 15, 15, 13, 10, 9, 9</option>
+<option value="15x15x12x12x9x8">* 15, 15, 12, 12, 9, 8</option>
+<option value="15x15x12x11x10x8">* 15, 15, 12, 11, 10, 8</option>
+<option value="15x15x12x11x9x9">* 15, 15, 12, 11, 9, 9</option>
+<option value="15x15x12x10x10x9">* 15, 15, 12, 10, 10, 9</option>
+<option value="15x15x11x11x11x8">* 15, 15, 11, 11, 11, 8</option>
+<option value="15x15x11x11x10x9">* 15, 15, 11, 11, 10, 9</option>
+<option value="15x15x11x10x10x10">* 15, 15, 11, 10, 10, 10</option>
+<option value="15x14x14x12x8x8">* 15, 14, 14, 12, 8, 8</option>
+<option value="15x14x14x11x9x8">* 15, 14, 14, 11, 9, 8</option>
+<option value="15x14x14x10x10x8">* 15, 14, 14, 10, 10, 8</option>
+<option value="15x14x14x10x9x9">* 15, 14, 14, 10, 9, 9</option>
+<option value="15x14x13x13x9x8">* 15, 14, 13, 13, 9, 8</option>
+<option value="15x14x13x12x9x9">* 15, 14, 13, 12, 9, 9</option>
+<option value="15x14x13x11x11x8">* 15, 14, 13, 11, 11, 8</option>
+<option value="15x14x13x11x10x9">* 15, 14, 13, 11, 10, 9</option>
+<option value="15x14x13x10x10x10">* 15, 14, 13, 10, 10, 10</option>
+<option value="15x14x12x12x11x8">* 15, 14, 12, 12, 11, 8</option>
+<option value="15x14x12x12x10x9">* 15, 14, 12, 12, 10, 9</option>
+<option value="15x14x12x11x11x9">* 15, 14, 12, 11, 11, 9</option>
+<option value="15x14x12x11x10x10">* 15, 14, 12, 11, 10, 10</option>
+<option value="15x14x11x11x11x10">* 15, 14, 11, 11, 11, 10</option>
+<option value="15x13x13x13x11x8">* 15, 13, 13, 13, 11, 8</option>
+<option value="15x13x13x13x10x9">* 15, 13, 13, 13, 10, 9</option>
+<option value="15x13x13x12x12x8">* 15, 13, 13, 12, 12, 8</option>
+<option value="15x13x13x12x11x9">* 15, 13, 13, 12, 11, 9</option>
+<option value="15x13x13x12x10x10">* 15, 13, 13, 12, 10, 10</option>
+<option value="15x13x13x11x11x10">* 15, 13, 13, 11, 11, 10</option>
+<option value="15x13x12x12x12x9">* 15, 13, 12, 12, 12, 9</option>
+<option value="15x13x12x12x11x10">* 15, 13, 12, 12, 11, 10</option>
+<option value="15x13x12x11x11x11">* 15, 13, 12, 11, 11, 11</option>
+<option value="15x12x12x12x12x10">* 15, 12, 12, 12, 12, 10</option>
+<option value="15x12x12x12x11x11">* 15, 12, 12, 12, 11, 11</option>
+<option value="14x14x14x13x9x8">* 14, 14, 14, 13, 9, 8</option>
+<option value="14x14x14x12x10x8">* 14, 14, 14, 12, 10, 8</option>
+<option value="14x14x14x12x9x9">* 14, 14, 14, 12, 9, 9</option>
+<option value="14x14x14x11x11x8">* 14, 14, 14, 11, 11, 8</option>
+<option value="14x14x14x11x10x9">* 14, 14, 14, 11, 10, 9</option>
+<option value="14x14x14x10x10x10">* 14, 14, 14, 10, 10, 10</option>
+<option value="14x14x13x13x11x8">* 14, 14, 13, 13, 11, 8</option>
+<option value="14x14x13x13x10x9">* 14, 14, 13, 13, 10, 9</option>
+<option value="14x14x13x12x12x8">* 14, 14, 13, 12, 12, 8</option>
+<option value="14x14x13x12x11x9">* 14, 14, 13, 12, 11, 9</option>
+<option value="14x14x13x12x10x10">* 14, 14, 13, 12, 10, 10</option>
+<option value="14x14x13x11x11x10">* 14, 14, 13, 11, 11, 10</option>
+<option value="14x14x12x12x12x9">* 14, 14, 12, 12, 12, 9</option>
+<option value="14x14x12x12x11x10">* 14, 14, 12, 12, 11, 10</option>
+<option value="14x14x12x11x11x11">* 14, 14, 12, 11, 11, 11</option>
+<option value="14x13x13x13x13x8">* 14, 13, 13, 13, 13, 8</option>
+<option value="14x13x13x13x12x9">* 14, 13, 13, 13, 12, 9</option>
+<option value="14x13x13x13x11x10">* 14, 13, 13, 13, 11, 10</option>
+<option value="14x13x13x12x12x10">* 14, 13, 13, 12, 12, 10</option>
+<option value="14x13x13x12x11x11">* 14, 13, 13, 12, 11, 11</option>
+<option value="14x13x12x12x12x11">* 14, 13, 12, 12, 12, 11</option>
+<option value="14x12x12x12x12x12">* 14, 12, 12, 12, 12, 12</option>
+<option value="13x13x13x13x13x10">* 13, 13, 13, 13, 13, 10</option>
+<option value="13x13x13x13x12x11">* 13, 13, 13, 13, 12, 11</option>
+<option value="13x13x13x12x12x12">* 13, 13, 13, 12, 12, 12</option>
+</select></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center"><input type="checkbox" id="pcfloatscores" name="pcfloatscores" value="yes">&nbsp;<strong>Option:</strong>&nbsp;Float +2/+1 ability score increases by class only (ignore race per <em>TCoE</em>&nbsp;p.&nbsp;7)</td>
+</tr>
+
+<tr>
+<td align="center" colspan="2" class="abilitypick"><strong>OR,</strong> assign final ability scores manually (ignore rules)...<br />
+<select name="pcstrength">
+<option value="0" selected>STR...</option>
+<option value="1">STR 1</option>
+<option value="2">STR 2</option>
+<option value="3">STR 3</option>
+<option value="4">STR 4</option>
+<option value="5">STR 5</option>
+<option value="6">STR 6</option>
+<option value="7">STR 7</option>
+<option value="8">STR 8</option>
+<option value="9">STR 9</option>
+<option value="10">STR 10</option>
+<option value="11">STR 11</option>
+<option value="12">STR 12</option>
+<option value="13">STR 13</option>
+<option value="14">STR 14</option>
+<option value="15">STR 15</option>
+<option value="16">STR 16</option>
+<option value="17">STR 17</option>
+<option value="18">STR 18</option>
+<option value="19">STR 19</option>
+<option value="20">STR 20</option>
+<option value="21">STR 21</option>
+<option value="22">STR 22</option>
+<option value="23">STR 23</option>
+<option value="24">STR 24</option>
+<option value="25">STR 25</option>
+</select>
+&nbsp;
+<select name="pcdexterity" tabindex="16">
+<option value="0" selected>DEX...</option>
+<option value="1">DEX 1</option>
+<option value="2">DEX 2</option>
+<option value="3">DEX 3</option>
+<option value="4">DEX 4</option>
+<option value="5">DEX 5</option>
+<option value="6">DEX 6</option>
+<option value="7">DEX 7</option>
+<option value="8">DEX 8</option>
+<option value="9">DEX 9</option>
+<option value="10">DEX 10</option>
+<option value="11">DEX 11</option>
+<option value="12">DEX 12</option>
+<option value="13">DEX 13</option>
+<option value="14">DEX 14</option>
+<option value="15">DEX 15</option>
+<option value="16">DEX 16</option>
+<option value="17">DEX 17</option>
+<option value="18">DEX 18</option>
+<option value="19">DEX 19</option>
+<option value="20">DEX 20</option>
+<option value="21">DEX 21</option>
+<option value="22">DEX 22</option>
+<option value="23">DEX 23</option>
+<option value="24">DEX 24</option>
+<option value="25">DEX 25</option>
+</select>
+&nbsp;
+<select name="pcconstitution" tabindex="17">
+<option value="0" selected>CON...</option>
+<option value="1">CON 1</option>
+<option value="2">CON 2</option>
+<option value="3">CON 3</option>
+<option value="4">CON 4</option>
+<option value="5">CON 5</option>
+<option value="6">CON 6</option>
+<option value="7">CON 7</option>
+<option value="8">CON 8</option>
+<option value="9">CON 9</option>
+<option value="10">CON 10</option>
+<option value="11">CON 11</option>
+<option value="12">CON 12</option>
+<option value="13">CON 13</option>
+<option value="14">CON 14</option>
+<option value="15">CON 15</option>
+<option value="16">CON 16</option>
+<option value="17">CON 17</option>
+<option value="18">CON 18</option>
+<option value="19">CON 19</option>
+<option value="20">CON 20</option>
+<option value="21">CON 21</option>
+<option value="22">CON 22</option>
+<option value="23">CON 23</option>
+<option value="24">CON 24</option>
+<option value="25">CON 25</option>
+</select>
+&nbsp;
+<select name="pcintelligence" tabindex="18">
+<option value="0" selected>INT...</option>
+<option value="1">INT 1</option>
+<option value="2">INT 2</option>
+<option value="3">INT 3</option>
+<option value="4">INT 4</option>
+<option value="5">INT 5</option>
+<option value="6">INT 6</option>
+<option value="7">INT 7</option>
+<option value="8">INT 8</option>
+<option value="9">INT 9</option>
+<option value="10">INT 10</option>
+<option value="11">INT 11</option>
+<option value="12">INT 12</option>
+<option value="13">INT 13</option>
+<option value="14">INT 14</option>
+<option value="15">INT 15</option>
+<option value="16">INT 16</option>
+<option value="17">INT 17</option>
+<option value="18">INT 18</option>
+<option value="19">INT 19</option>
+<option value="20">INT 20</option>
+<option value="21">INT 21</option>
+<option value="22">INT 22</option>
+<option value="23">INT 23</option>
+<option value="24">INT 24</option>
+<option value="25">INT 25</option>
+</select>
+&nbsp;
+<select name="pcwisdom" tabindex="19">
+<option value="0" selected>WIS...</option>
+<option value="1">WIS 1</option>
+<option value="2">WIS 2</option>
+<option value="3">WIS 3</option>
+<option value="4">WIS 4</option>
+<option value="5">WIS 5</option>
+<option value="6">WIS 6</option>
+<option value="7">WIS 7</option>
+<option value="8">WIS 8</option>
+<option value="9">WIS 9</option>
+<option value="10">WIS 10</option>
+<option value="11">WIS 11</option>
+<option value="12">WIS 12</option>
+<option value="13">WIS 13</option>
+<option value="14">WIS 14</option>
+<option value="15">WIS 15</option>
+<option value="16">WIS 16</option>
+<option value="17">WIS 17</option>
+<option value="18">WIS 18</option>
+<option value="19">WIS 19</option>
+<option value="20">WIS 20</option>
+<option value="21">WIS 21</option>
+<option value="22">WIS 22</option>
+<option value="23">WIS 23</option>
+<option value="24">WIS 24</option>
+<option value="25">WIS 25</option>
+</select>
+&nbsp;<select name="pccharisma" tabindex="20">
+<option value="0" selected>CHA...</option>
+<option value="1">CHA 1</option>
+<option value="2">CHA 2</option>
+<option value="3">CHA 3</option>
+<option value="4">CHA 4</option>
+<option value="5">CHA 5</option>
+<option value="6">CHA 6</option>
+<option value="7">CHA 7</option>
+<option value="8">CHA 8</option>
+<option value="9">CHA 9</option>
+<option value="10">CHA 10</option>
+<option value="11">CHA 11</option>
+<option value="12">CHA 12</option>
+<option value="13">CHA 13</option>
+<option value="14">CHA 14</option>
+<option value="15">CHA 15</option>
+<option value="16">CHA 16</option>
+<option value="17">CHA 17</option>
+<option value="18">CHA 18</option>
+<option value="19">CHA 19</option>
+<option value="20">CHA 20</option>
+<option value="21">CHA 21</option>
+<option value="22">CHA 22</option>
+<option value="23">CHA 23</option>
+<option value="24">CHA 24</option>
+<option value="25">CHA 25</option>
+</select></td>
+</tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+<tr><td colspan="2" align="center"><strong>F&nbsp;E&nbsp;A&nbsp;T&nbsp;S</strong></td></tr>
+
+<tr>
+<td colspan="2" align="center">
+<table width="100%" cellspacing="0" cellpadding="0">
+
+<tr><td valign="top" align="right"><select name="pcfeat01">
+<option value="0" selected>Optional Rule: Choose first feat...</option>
+<option value="0">None, ignore feat options</option>
+<option value="Custom">-- CUSTOM FEAT --</option>
+<option value="Custom">New/Other Feat (detail below)</option>
+<option value="0">-- PLAYER'S HANDBOOK FEATS --</option>
+<option value="Actor">Actor</option>
+<option value="Alert">Alert</option>
+<option value="Athlete">Athlete</option>
+<option value="Charger">Charger</option>
+<option value="CrossbowExpert">Crossbow Expert</option>
+<option value="DefensiveDuelist">Defensive Duelist (req. DEX 13+)</option>
+<option value="DualWielder">Dual Wielder</option>
+<option value="DungeonDelver">Dungeon Delver</option>
+<option value="Durable">Durable</option>
+<option value="ElementalAdeptAcid">Elemental Adept (Acid) (req. spellcaster)</option>
+<option value="ElementalAdeptCold">Elemental Adept (Cold) (req. spellcaster)</option>
+<option value="ElementalAdeptFire">Elemental Adept (Fire) (req. spellcaster)</option>
+<option value="ElementalAdeptLightning">Elemental Adept (Lightning) (req. spellcaster)</option>
+<option value="ElementalAdeptThunder">Elemental Adept (Thunder) (req. spellcaster)</option>
+<option value="Grappler">Grappler (req. STR 13+)</option>
+<option value="GreatWeaponMaster">Great Weapon Master</option>
+<option value="Healer">Healer</option>
+<option value="HeavilyArmored">Heavily Armored (req. Med. Armor prof.)</option>
+<option value="HeavyArmorMaster">Heavy Armor Master (req. Hvy. Armor prof.)</option>
+<option value="InspiringLeader">Inspiring Leader (req. CHA 13+)</option>
+<option value="KeenMind">Keen Mind</option>
+<option value="LightlyArmored">Lightly Armored</option>
+<option value="Linguist">Linguist</option>
+<option value="Lucky">Lucky</option>
+<option value="MageSlayer">Mage Slayer</option>
+<option value="MagicInitiateBard">Magic Initiate (Bard)</option>
+<option value="MagicInitiateCleric">Magic Initiate (Cleric)</option>
+<option value="MagicInitiateDruid">Magic Initiate (Druid)</option>
+<option value="MagicInitiateSorcerer">Magic Initiate (Sorcerer)</option>
+<option value="MagicInitiateWarlock">Magic Initiate (Warlock)</option>
+<option value="MagicInitiateWizard">Magic Initiate (Wizard)</option>
+<option value="MartialAdept">Martial Adept</option>
+<option value="MediumArmorMaster">Medium Armor Master (req. Med. Armor prof.)</option>
+<option value="Mobile">Mobile</option>
+<option value="ModeratelyArmored">Moderately Armored (req. Light Armor prof.)</option>
+<option value="MountedCombatant">Mounted Combatant</option>
+<option value="Observant">Observant</option>
+<option value="PolearmMaster">Polearm Master</option>
+<option value="ResilientSTR">Resilient (STR)</option>
+<option value="ResilientDEX">Resilient (DEX)</option>
+<option value="ResilientCON">Resilient (CON)</option>
+<option value="ResilientINT">Resilient (INT)</option>
+<option value="ResilientWIS">Resilient (WIS)</option>
+<option value="ResilientCHA">Resilient (CHA)</option>
+<option value="RitualCasterBard">Ritual Caster (Bard) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterCleric">Ritual Caster (Cleric) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterDruid">Ritual Caster (Druid) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterSorcerer">Ritual Caster (Sorcerer) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterWarlock">Ritual Caster (Warlock) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterWizard">Ritual Caster (Wizard) (req. INT 13+ or WIS 13+)</option>
+<option value="SavageAttacker">Savage Attacker</option>
+<option value="Sentinel">Sentinel</option>
+<option value="Sharpshooter">Sharpshooter</option>
+<option value="ShieldMaster">Shield Master</option>
+<option value="SkilledBarbarian">Skilled (Barbarian skills, tools)</option>
+<option value="SkilledBard">Skilled (Bard skills, tools)</option>
+<option value="SkilledCleric">Skilled (Cleric skills, tools)</option>
+<option value="SkilledDruid">Skilled (Druid skills, tools)</option>
+<option value="SkilledFighter">Skilled (Fighter skills, tools)</option>
+<option value="SkilledMonk">Skilled (Monk skills, tools)</option>
+<option value="SkilledPaladin">Skilled (Paladin skills, tools)</option>
+<option value="SkilledRanger">Skilled (Ranger skills, tools)</option>
+<option value="SkilledRogue">Skilled (Rogue skills, tools)</option>
+<option value="SkilledSorcerer">Skilled (Sorcerer skills, tools)</option>
+<option value="SkilledWarlock">Skilled (Warlock skills, tools)</option>
+<option value="SkilledWizard">Skilled (Wizard skills, tools)</option>
+<option value="Skulker">Skulker (req. DEX 13+)</option>
+<option value="SpellSniper">Spell Sniper (req. spellcaster)</option>
+<option value="TavernBrawler">Tavern Brawler</option>
+<option value="Tough">Tough</option>
+<option value="WarCaster">War Caster (req. spellcaster)</option>
+<option value="WeaponMaster">Weapon Master</option>
+</select></td>
+<td valign="top" align="left"><select name="pcfeat01min">
+<option value="4" selected>...when reaching:</option>
+<option value="1">Level 1 (human variant option)</option>
+<option value="4">Level 4</option>
+<option value="6">Level 6 (Fighters only)</option>
+<option value="8">Level 8</option>
+<option value="12">Level 12</option>
+<option value="14">Level 14 (Fighters only)</option>
+<option value="16">Level 16</option>
+<option value="19">Level 19</option>
+</select>
+</td></tr>
+<tr><td valign="top" align="right"><select name="pcfeat02">
+<option value="0" selected>Optional Rule: Choose second feat...</option>
+<option value="0">None, ignore feat options</option>
+<option value="Custom">-- CUSTOM FEAT --</option>
+<option value="Custom">New/Other Feat (detail below)</option>
+<option value="0">-- PLAYER'S HANDBOOK --</option>
+<option value="Actor">Actor</option>
+<option value="Alert">Alert</option>
+<option value="Athlete">Athlete</option>
+<option value="Charger">Charger</option>
+<option value="CrossbowExpert">Crossbow Expert</option>
+<option value="DefensiveDuelist">Defensive Duelist (req. DEX 13+)</option>
+<option value="DualWielder">Dual Wielder</option>
+<option value="DungeonDelver">Dungeon Delver</option>
+<option value="Durable">Durable</option>
+<option value="ElementalAdeptAcid">Elemental Adept (Acid) (req. spellcaster)</option>
+<option value="ElementalAdeptCold">Elemental Adept (Cold) (req. spellcaster)</option>
+<option value="ElementalAdeptFire">Elemental Adept (Fire) (req. spellcaster)</option>
+<option value="ElementalAdeptLightning">Elemental Adept (Lightning) (req. spellcaster)</option>
+<option value="ElementalAdeptThunder">Elemental Adept (Thunder) (req. spellcaster)</option>
+<option value="Grappler">Grappler (req. STR 13+)</option>
+<option value="GreatWeaponMaster">Great Weapon Master</option>
+<option value="Healer">Healer</option>
+<option value="HeavilyArmored">Heavily Armored (req. Med. Armor prof.)</option>
+<option value="HeavyArmorMaster">Heavy Armor Master (req. Hvy. Armor prof.)</option>
+<option value="InspiringLeader">Inspiring Leader (req. CHA 13+)</option>
+<option value="KeenMind">Keen Mind</option>
+<option value="LightlyArmored">Lightly Armored</option>
+<option value="Linguist">Linguist</option>
+<option value="Lucky">Lucky</option>
+<option value="MageSlayer">Mage Slayer</option>
+<option value="MagicInitiateBard">Magic Initiate (Bard)</option>
+<option value="MagicInitiateCleric">Magic Initiate (Cleric)</option>
+<option value="MagicInitiateDruid">Magic Initiate (Druid)</option>
+<option value="MagicInitiateSorcerer">Magic Initiate (Sorcerer)</option>
+<option value="MagicInitiateWarlock">Magic Initiate (Warlock)</option>
+<option value="MagicInitiateWizard">Magic Initiate (Wizard)</option>
+<option value="MartialAdept">Martial Adept</option>
+<option value="MediumArmorMaster">Medium Armor Master (req. Med. Armor prof.)</option>
+<option value="Mobile">Mobile</option>
+<option value="ModeratelyArmored">Moderately Armored (req. Light Armor prof.)</option>
+<option value="MountedCombatant">Mounted Combatant</option>
+<option value="Observant">Observant</option>
+<option value="PolearmMaster">Polearm Master</option>
+<option value="ResilientSTR">Resilient (STR)</option>
+<option value="ResilientDEX">Resilient (DEX)</option>
+<option value="ResilientCON">Resilient (CON)</option>
+<option value="ResilientINT">Resilient (INT)</option>
+<option value="ResilientWIS">Resilient (WIS)</option>
+<option value="ResilientCHA">Resilient (CHA)</option>
+<option value="RitualCasterBard">Ritual Caster (Bard) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterCleric">Ritual Caster (Cleric) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterDruid">Ritual Caster (Druid) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterSorcerer">Ritual Caster (Sorcerer) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterWarlock">Ritual Caster (Warlock) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterWizard">Ritual Caster (Wizard) (req. INT 13+ or WIS 13+)</option>
+<option value="SavageAttacker">Savage Attacker</option>
+<option value="Sentinel">Sentinel</option>
+<option value="Sharpshooter">Sharpshooter</option>
+<option value="ShieldMaster">Shield Master</option>
+<option value="SkilledBarbarian">Skilled (Barbarian skills, tools)</option>
+<option value="SkilledBard">Skilled (Bard skills, tools)</option>
+<option value="SkilledCleric">Skilled (Cleric skills, tools)</option>
+<option value="SkilledDruid">Skilled (Druid skills, tools)</option>
+<option value="SkilledFighter">Skilled (Fighter skills, tools)</option>
+<option value="SkilledMonk">Skilled (Monk skills, tools)</option>
+<option value="SkilledPaladin">Skilled (Paladin skills, tools)</option>
+<option value="SkilledRanger">Skilled (Ranger skills, tools)</option>
+<option value="SkilledRogue">Skilled (Rogue skills, tools)</option>
+<option value="SkilledSorcerer">Skilled (Sorcerer skills, tools)</option>
+<option value="SkilledWarlock">Skilled (Warlock skills, tools)</option>
+<option value="SkilledWizard">Skilled (Wizard skills, tools)</option>
+<option value="Skulker">Skulker (req. DEX 13+)</option>
+<option value="SpellSniper">Spell Sniper (req. spellcaster)</option>
+<option value="TavernBrawler">Tavern Brawler</option>
+<option value="Tough">Tough</option>
+<option value="WarCaster">War Caster (req. spellcaster)</option>
+<option value="WeaponMaster">Weapon Master</option>
+</select></td>
+<td valign="top" align="left"><select name="pcfeat02min">
+<option value="8" selected>...when reaching:</option>
+<option value="4">Level 4</option>
+<option value="6">Level 6 (Fighters only)</option>
+<option value="8">Level 8</option>
+<option value="12">Level 12</option>
+<option value="14">Level 14 (Fighters only)</option>
+<option value="16">Level 16</option>
+<option value="19">Level 19</option>
+</select>
+</td></tr>
+<tr><td valign="top" align="right"><select name="pcfeat03">
+<option value="0" selected>Optional Rule: Choose third feat...</option>
+<option value="0">None, ignore feat options</option>
+<option value="Custom">-- CUSTOM FEAT --</option>
+<option value="Custom">New/Other Feat (detail below)</option>
+<option value="0">-- PLAYER'S HANDBOOK --</option>
+<option value="Actor">Actor</option>
+<option value="Alert">Alert</option>
+<option value="Athlete">Athlete</option>
+<option value="Charger">Charger</option>
+<option value="CrossbowExpert">Crossbow Expert</option>
+<option value="DefensiveDuelist">Defensive Duelist (req. DEX 13+)</option>
+<option value="DualWielder">Dual Wielder</option>
+<option value="DungeonDelver">Dungeon Delver</option>
+<option value="Durable">Durable</option>
+<option value="ElementalAdeptAcid">Elemental Adept (Acid) (req. spellcaster)</option>
+<option value="ElementalAdeptCold">Elemental Adept (Cold) (req. spellcaster)</option>
+<option value="ElementalAdeptFire">Elemental Adept (Fire) (req. spellcaster)</option>
+<option value="ElementalAdeptLightning">Elemental Adept (Lightning) (req. spellcaster)</option>
+<option value="ElementalAdeptThunder">Elemental Adept (Thunder) (req. spellcaster)</option>
+<option value="Grappler">Grappler (req. STR 13+)</option>
+<option value="GreatWeaponMaster">Great Weapon Master</option>
+<option value="Healer">Healer</option>
+<option value="HeavilyArmored">Heavily Armored (req. Med. Armor prof.)</option>
+<option value="HeavyArmorMaster">Heavy Armor Master (req. Hvy. Armor prof.)</option>
+<option value="InspiringLeader">Inspiring Leader (req. CHA 13+)</option>
+<option value="KeenMind">Keen Mind</option>
+<option value="LightlyArmored">Lightly Armored</option>
+<option value="Linguist">Linguist</option>
+<option value="Lucky">Lucky</option>
+<option value="MageSlayer">Mage Slayer</option>
+<option value="MagicInitiateBard">Magic Initiate (Bard)</option>
+<option value="MagicInitiateCleric">Magic Initiate (Cleric)</option>
+<option value="MagicInitiateDruid">Magic Initiate (Druid)</option>
+<option value="MagicInitiateSorcerer">Magic Initiate (Sorcerer)</option>
+<option value="MagicInitiateWarlock">Magic Initiate (Warlock)</option>
+<option value="MagicInitiateWizard">Magic Initiate (Wizard)</option>
+<option value="MartialAdept">Martial Adept</option>
+<option value="MediumArmorMaster">Medium Armor Master (req. Med. Armor prof.)</option>
+<option value="Mobile">Mobile</option>
+<option value="ModeratelyArmored">Moderately Armored (req. Light Armor prof.)</option>
+<option value="MountedCombatant">Mounted Combatant</option>
+<option value="Observant">Observant</option>
+<option value="PolearmMaster">Polearm Master</option>
+<option value="ResilientSTR">Resilient (STR)</option>
+<option value="ResilientDEX">Resilient (DEX)</option>
+<option value="ResilientCON">Resilient (CON)</option>
+<option value="ResilientINT">Resilient (INT)</option>
+<option value="ResilientWIS">Resilient (WIS)</option>
+<option value="ResilientCHA">Resilient (CHA)</option>
+<option value="RitualCasterBard">Ritual Caster (Bard) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterCleric">Ritual Caster (Cleric) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterDruid">Ritual Caster (Druid) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterSorcerer">Ritual Caster (Sorcerer) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterWarlock">Ritual Caster (Warlock) (req. INT 13+ or WIS 13+)</option>
+<option value="RitualCasterWizard">Ritual Caster (Wizard) (req. INT 13+ or WIS 13+)</option>
+<option value="SavageAttacker">Savage Attacker</option>
+<option value="Sentinel">Sentinel</option>
+<option value="Sharpshooter">Sharpshooter</option>
+<option value="ShieldMaster">Shield Master</option>
+<option value="SkilledBarbarian">Skilled (Barbarian skills, tools)</option>
+<option value="SkilledBard">Skilled (Bard skills, tools)</option>
+<option value="SkilledCleric">Skilled (Cleric skills, tools)</option>
+<option value="SkilledDruid">Skilled (Druid skills, tools)</option>
+<option value="SkilledFighter">Skilled (Fighter skills, tools)</option>
+<option value="SkilledMonk">Skilled (Monk skills, tools)</option>
+<option value="SkilledPaladin">Skilled (Paladin skills, tools)</option>
+<option value="SkilledRanger">Skilled (Ranger skills, tools)</option>
+<option value="SkilledRogue">Skilled (Rogue skills, tools)</option>
+<option value="SkilledSorcerer">Skilled (Sorcerer skills, tools)</option>
+<option value="SkilledWarlock">Skilled (Warlock skills, tools)</option>
+<option value="SkilledWizard">Skilled (Wizard skills, tools)</option>
+<option value="Skulker">Skulker (req. DEX 13+)</option>
+<option value="SpellSniper">Spell Sniper (req. spellcaster)</option>
+<option value="TavernBrawler">Tavern Brawler</option>
+<option value="Tough">Tough</option>
+<option value="WarCaster">War Caster (req. spellcaster)</option>
+<option value="WeaponMaster">Weapon Master</option>
+</select></td>
+<td valign="top" align="left"><select name="pcfeat03min">
+<option value="12" selected>...when reaching:</option>
+<option value="6">Level 6 (Fighters only)</option>
+<option value="8">Level 8</option>
+<option value="12">Level 12</option>
+<option value="14">Level 14 (Fighters only)</option>
+<option value="16">Level 16</option>
+<option value="19">Level 19</option>
+</select>
+</td></tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+
+<tr><td valign="middle" align="right"><strong>Custom&nbsp;Feat Name:</strong>&nbsp;<input type="text" size="25" name="custFeatName" /></td>
+<td valign="middle" align="left"><select name="pcfeatincrease">
+<option value="0" selected>Add to ability?</option>
+<option value="0">no increase</option>
+<option value="str">+1 to Strength</option>
+<option value="dex">+1 to Dexterity</option>
+<option value="con">+1 to Constitution</option>
+<option value="int">+1 to Intelligence</option>
+<option value="wis">+1 to Wisdom</option>
+<option value="cha">+1 to Charisma</option>
+</select>
+</td></tr>
+<tr><td colspan="2" align="center">Describe custom feat ability.<br />
+<textarea cols="50" rows="3" name="custFeatDescp"></textarea></td></tr>
+</table>
+</td></tr>
+
+
+
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+<tr><td colspan="2" align="center"><strong>M&nbsp;A&nbsp;G&nbsp;I&nbsp;C&nbsp; &nbsp; &nbsp;A&nbsp;N&nbsp;D&nbsp; &nbsp; &nbsp;T&nbsp;E&nbsp;C&nbsp;H&nbsp; &nbsp; &nbsp;I&nbsp;T&nbsp;E&nbsp;M&nbsp;S</strong></td></tr>
+
+<tr>
+<td colspan="2" align="center"><select name="dmgmagicitems" tabindex="12">
+<option value="no" selected>Optional Rule: Add magic items to gear and stats?</option>
+<option value="no">No, let DM award separately per the adventure or campaign</option>
+<option value="normal">Yes, random treasure table picks by tier (DMG p. 144)</option>
+<option value="lowmagic">Maybe, as Low Magic Campaign (DMG p. 38)</option>
+<option value="standardmagic">Maybe, as Standard Magic Campaign (DMG p. 38)</option>
+<option value="highmagic">Maybe, as High Magic Campaign (DMG p. 38)</option>
+<option value="montyhaul">Just go wild with stupid Monty Haul craziness</option>
+</select> &nbsp;<em>&nbsp;alakazam!&nbsp;</em></em></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center"><select name="dmgtechnology" tabindex="12">
+<option value="no" selected>Optional Rule: Alternate technology, weapons, and armor?</option>
+<option value="low">LOW: Primitive / Stone Age (no metal, monster hides)</option>
+<option value="medieval">MEDIUM: Medieval / Steel Age (default D&D)</option>
+<option value="ren">HIGH: Renaissance / Gunpowder Age (muskets, early pistols)</option>
+<option value="modern">VERY HIGH: Modern / Digital Age (firearms, Kevlar armor)</option>
+<option value="futuristic">ULTRA HIGH: Futuristic / Starfaring Age (beam weapons, sci-fi suits)</option>
+</select> &nbsp;<em>&nbsp;bang! zap!&nbsp;</em></em></td>
+</tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+<tr><td colspan="2" align="center"><strong>C&nbsp;U&nbsp;S&nbsp;T&nbsp;O&nbsp;M&nbsp; &nbsp;R&nbsp;A&nbsp;C&nbsp;I&nbsp;A&nbsp;L&nbsp; &nbsp;L&nbsp;I&nbsp;N&nbsp;E&nbsp;A&nbsp;G&nbsp;E&nbsp;</strong></td></tr>
+<tr><td colspan="2" align="center" style="padding: 0 15px 10px 15px;"></td></tr>
+<tr><td colspan="2" align="center"><p class="custom"><strong><big>Lineage&nbsp;Name:</big></strong> <input type="text" size="40" name="ovrdDescp" /><br /><em><strong>Note:</strong> A new Race/Ancestry/Heritage name is needed to use the traits below.</em></td></tr>
+<tr><td colspan="2" align="center">
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr><td valign="top" align="right">
+
+<p class="custom">
+Creature&nbsp;Type:&nbsp;<select id="ovrdCreType" name="ovrdCreType">
+<option value="0" selected>select...</option>
+<option value="Aberration">Aberration</option>
+<option value="Beast">Beast</option>
+<option value="Celestial">Celestial</option>
+<option value="Construct">Construct</option>
+<option value="Dragon">Dragon</option>
+<option value="Elemental">Elemental</option>
+<option value="Fey">Fey</option>
+<option value="Fiend">Fiend</option>
+<option value="Giant">Giant</option>
+<option value="Humanoid">Humanoid</option>
+<option value="Monstrosity">Monstrosity</option>
+<option value="Ooze">Ooze</option>
+<option value="Plant">Plant</option>
+<option value="Undead">Undead</option>
+</select></p>
+
+<p class="custom">
+Ability&nbsp;score&nbsp;+2&nbsp;to:&nbsp;<select name="ovrdScorePlus2">
+<option value="0" selected>select...</option>
+<option value="STR">Strength</option>
+<option value="DEX">Dexterity</option>
+<option value="CON">Constitution</option>
+<option value="INT">Intelligence</option>
+<option value="WIS">Wisdom</option>
+<option value="CHA">Charisma</option>
+</select></p>
+
+<p class="custom">Ability&nbsp;score&nbsp;+1&nbsp;to:&nbsp;<select name="ovrdScorePlus1">
+<option value="0" selected>select...</option>
+<option value="STR">Strength</option>
+<option value="DEX">Dexterity</option>
+<option value="CON">Constitution</option>
+<option value="INT">Intelligence</option>
+<option value="WIS">Wisdom</option>
+<option value="CHA">Charisma</option>
+</select></p>
+
+<p class="custom">Age (Number In Years):&nbsp;<input type="text" size="5" id="ovrdAge" name="ovrdAge" /></p>
+
+<p class="custom">Height:&nbsp;<select name="ovrdHght">
+<option value="-6">Small Sizes...</option>
+<option value="-6">2' 0" (61 cm)</option>
+<option value="-5">2' 1" (64 cm)</option>
+<option value="-4">2' 2" (66 cm)</option>
+<option value="-3">2' 3" (69 cm)</option>
+<option value="-2">2' 4" (71 cm)</option>
+<option value="-1">2' 5" (74 cm)</option>
+<option value="0">2' 6" (76 cm)</option>
+<option value="1">2' 7" (79 cm)</option>
+<option value="2">2' 8" (81 cm)</option>
+<option value="3">2' 9" (84 cm)</option>
+<option value="4">2' 10" (86 cm)</option>
+<option value="5">2' 11" (89 cm)</option>
+<option value="6">3' 0" (91 cm)</option>
+<option value="7">3' 1" (94 cm)</option>
+<option value="8">3' 2" (97 cm)</option>
+<option value="9">3' 3" (99 cm)</option>
+<option value="10">3' 4" (102 cm)</option>
+<option value="11">3' 5" (104 cm)</option>
+<option value="12">3' 6" (107 cm)</option>
+<option value="13">3' 7" (109 cm)</option>
+<option value="14">3' 8" (112 cm)</option>
+<option value="15">3' 9" (114 cm)</option>
+<option value="16">3' 10" (117 cm)</option>
+<option value="17">3' 11" (119 cm)</option>
+<option value="18">Medium Sizes...</option>
+<option value="18">4' 0" (122 cm)</option>
+<option value="19">4' 1" (124 cm)</option>
+<option value="20">4' 2" (127 cm)</option>
+<option value="21">4' 3" (130 cm)</option>
+<option value="22">4' 4" (132 cm)</option>
+<option value="23">4' 5" (135 cm)</option>
+<option value="24">4' 6" (137 cm)</option>
+<option value="25">4' 7" (140 cm)</option>
+<option value="26">4' 8" (142 cm)</option>
+<option value="27">4' 9" (145 cm)</option>
+<option value="28">4' 10" (147 cm)</option>
+<option value="29">4' 11" (150 cm)</option>
+<option value="30">5' 0" (152 cm)</option>
+<option value="31">5' 1" (155 cm)</option>
+<option value="32">5' 2" (157 cm)</option>
+<option value="33">5' 3" (160 cm)</option>
+<option value="34">5' 4" (163 cm)</option>
+<option value="35">5' 5" (165 cm)</option>
+<option value="36">5' 6" (168 cm)</option>
+<option value="37" selected>5' 7" (170 cm)</option>
+<option value="38">5' 8" (173 cm)</option>
+<option value="39">5' 9" (175 cm)</option>
+<option value="40">5' 10" (178 cm)</option>
+<option value="41">5' 11" (180 cm)</option>
+<option value="42">6' 0" (183 cm)</option>
+<option value="43">6' 1" (185 cm)</option>
+<option value="44">6' 2" (188 cm)</option>
+<option value="45">6' 3" (191 cm)</option>
+<option value="46">6' 4" (193 cm)</option>
+<option value="47">6' 5" (196 cm)</option>
+<option value="48">6' 6" (198 cm)</option>
+<option value="49">6' 7" (201 cm)</option>
+<option value="50">6' 8" (203 cm)</option>
+<option value="51">6' 9" (206 cm)</option>
+<option value="52">6' 10" (208 cm)</option>
+<option value="53">6' 11" (211 cm)</option>
+<option value="54">7' 0" (213 cm)</option>
+<option value="55">7' 1" (216 cm)</option>
+<option value="56">7' 2" (218 cm)</option>
+<option value="57">7' 3" (221 cm)</option>
+<option value="58">7' 4" (224 cm)</option>
+<option value="59">7' 5" (226 cm)</option>
+<option value="60">7' 6" (229 cm)</option>
+<option value="61">7' 7" (231 cm)</option>
+<option value="62">7' 8" (234 cm)</option>
+<option value="63">7' 9" (236 cm)</option>
+<option value="64">7' 10" (239 cm)</option>
+<option value="65">7' 11" (241 cm)</option>
+<option value="66">8' 0" (244 cm)</option>
+</select></p>
+
+<p class="custom">Weight:&nbsp;<select name="ovrdWeight">
+<option value="10">10 lbs. (4.5 kg)</option>
+<option value="11">11 lbs. (5.0 kg)</option>
+<option value="12">12 lbs. (5.4 kg)</option>
+<option value="13">13 lbs. (5.9 kg)</option>
+<option value="14">14 lbs. (6.4 kg)</option>
+<option value="15">15 lbs. (6.8 kg)</option>
+<option value="16">16 lbs. (7.3 kg)</option>
+<option value="17">17 lbs. (7.7 kg)</option>
+<option value="18">18 lbs. (8.2 kg)</option>
+<option value="19">19 lbs. (8.6 kg)</option>
+<option value="20">20 lbs. (9.1 kg)</option>
+<option value="21">21 lbs. (9.5 kg)</option>
+<option value="22">22 lbs. (10.0 kg)</option>
+<option value="23">23 lbs. (10.4 kg)</option>
+<option value="24">24 lbs. (10.9 kg)</option>
+<option value="25">25 lbs. (11.3 kg)</option>
+<option value="26">26 lbs. (11.8 kg)</option>
+<option value="27">27 lbs. (12.2 kg)</option>
+<option value="28">28 lbs. (12.7 kg)</option>
+<option value="29">29 lbs. (13.2 kg)</option>
+<option value="30">30 lbs. (13.6 kg)</option>
+<option value="31">31 lbs. (14.1 kg)</option>
+<option value="32">32 lbs. (14.5 kg)</option>
+<option value="33">33 lbs. (15.0 kg)</option>
+<option value="34">34 lbs. (15.4 kg)</option>
+<option value="35">35 lbs. (15.9 kg)</option>
+<option value="36">36 lbs. (16.3 kg)</option>
+<option value="37">37 lbs. (16.8 kg)</option>
+<option value="38">38 lbs. (17.2 kg)</option>
+<option value="39">39 lbs. (17.7 kg)</option>
+<option value="40">40 lbs. (18.1 kg)</option>
+<option value="41">41 lbs. (18.6 kg)</option>
+<option value="42">42 lbs. (19.1 kg)</option>
+<option value="43">43 lbs. (19.5 kg)</option>
+<option value="44">44 lbs. (20.0 kg)</option>
+<option value="45">45 lbs. (20.4 kg)</option>
+<option value="46">46 lbs. (20.9 kg)</option>
+<option value="47">47 lbs. (21.3 kg)</option>
+<option value="48">48 lbs. (21.8 kg)</option>
+<option value="49">49 lbs. (22.2 kg)</option>
+<option value="50">50 lbs. (22.7 kg)</option>
+<option value="51">51 lbs. (23.1 kg)</option>
+<option value="52">52 lbs. (23.6 kg)</option>
+<option value="53">53 lbs. (24.0 kg)</option>
+<option value="54">54 lbs. (24.5 kg)</option>
+<option value="55">55 lbs. (24.9 kg)</option>
+<option value="56">56 lbs. (25.4 kg)</option>
+<option value="57">57 lbs. (25.9 kg)</option>
+<option value="58">58 lbs. (26.3 kg)</option>
+<option value="59">59 lbs. (26.8 kg)</option>
+<option value="60">60 lbs. (27.2 kg)</option>
+<option value="61">61 lbs. (27.7 kg)</option>
+<option value="62">62 lbs. (28.1 kg)</option>
+<option value="63">63 lbs. (28.6 kg)</option>
+<option value="64">64 lbs. (29.0 kg)</option>
+<option value="65">65 lbs. (29.5 kg)</option>
+<option value="66">66 lbs. (29.9 kg)</option>
+<option value="67">67 lbs. (30.4 kg)</option>
+<option value="68">68 lbs. (30.8 kg)</option>
+<option value="69">69 lbs. (31.3 kg)</option>
+<option value="70">70 lbs. (31.8 kg)</option>
+<option value="71">71 lbs. (32.2 kg)</option>
+<option value="72">72 lbs. (32.7 kg)</option>
+<option value="73">73 lbs. (33.1 kg)</option>
+<option value="74">74 lbs. (33.6 kg)</option>
+<option value="75">75 lbs. (34.0 kg)</option>
+<option value="76">76 lbs. (34.5 kg)</option>
+<option value="77">77 lbs. (34.9 kg)</option>
+<option value="78">78 lbs. (35.4 kg)</option>
+<option value="79">79 lbs. (35.8 kg)</option>
+<option value="80">80 lbs. (36.3 kg)</option>
+<option value="81">81 lbs. (36.7 kg)</option>
+<option value="82">82 lbs. (37.2 kg)</option>
+<option value="83">83 lbs. (37.6 kg)</option>
+<option value="84">84 lbs. (38.1 kg)</option>
+<option value="85">85 lbs. (38.6 kg)</option>
+<option value="86">86 lbs. (39.0 kg)</option>
+<option value="87">87 lbs. (39.5 kg)</option>
+<option value="88">88 lbs. (39.9 kg)</option>
+<option value="89">89 lbs. (40.4 kg)</option>
+<option value="90">90 lbs. (40.8 kg)</option>
+<option value="91">91 lbs. (41.3 kg)</option>
+<option value="92">92 lbs. (41.7 kg)</option>
+<option value="93">93 lbs. (42.2 kg)</option>
+<option value="94">94 lbs. (42.6 kg)</option>
+<option value="95">95 lbs. (43.1 kg)</option>
+<option value="96">96 lbs. (43.5 kg)</option>
+<option value="97">97 lbs. (44.0 kg)</option>
+<option value="98">98 lbs. (44.5 kg)</option>
+<option value="99">99 lbs. (44.9 kg)</option>
+<option value="100">100 lbs. (45.4 kg)</option>
+<option value="101">101 lbs. (45.8 kg)</option>
+<option value="102">102 lbs. (46.3 kg)</option>
+<option value="103">103 lbs. (46.7 kg)</option>
+<option value="104">104 lbs. (47.2 kg)</option>
+<option value="105">105 lbs. (47.6 kg)</option>
+<option value="106">106 lbs. (48.1 kg)</option>
+<option value="107">107 lbs. (48.5 kg)</option>
+<option value="108">108 lbs. (49.0 kg)</option>
+<option value="109">109 lbs. (49.4 kg)</option>
+<option value="110">110 lbs. (49.9 kg)</option>
+<option value="111">111 lbs. (50.3 kg)</option>
+<option value="112">112 lbs. (50.8 kg)</option>
+<option value="113">113 lbs. (51.3 kg)</option>
+<option value="114">114 lbs. (51.7 kg)</option>
+<option value="115">115 lbs. (52.2 kg)</option>
+<option value="116">116 lbs. (52.6 kg)</option>
+<option value="117">117 lbs. (53.1 kg)</option>
+<option value="118">118 lbs. (53.5 kg)</option>
+<option value="119">119 lbs. (54.0 kg)</option>
+<option value="120">120 lbs. (54.4 kg)</option>
+<option value="121">121 lbs. (54.9 kg)</option>
+<option value="122">122 lbs. (55.3 kg)</option>
+<option value="123">123 lbs. (55.8 kg)</option>
+<option value="124">124 lbs. (56.2 kg)</option>
+<option value="125">125 lbs. (56.7 kg)</option>
+<option value="126">126 lbs. (57.2 kg)</option>
+<option value="127">127 lbs. (57.6 kg)</option>
+<option value="128">128 lbs. (58.1 kg)</option>
+<option value="129">129 lbs. (58.5 kg)</option>
+<option value="130">130 lbs. (59.0 kg)</option>
+<option value="131">131 lbs. (59.4 kg)</option>
+<option value="132">132 lbs. (59.9 kg)</option>
+<option value="133">133 lbs. (60.3 kg)</option>
+<option value="134">134 lbs. (60.8 kg)</option>
+<option value="135">135 lbs. (61.2 kg)</option>
+<option value="136">136 lbs. (61.7 kg)</option>
+<option value="137">137 lbs. (62.1 kg)</option>
+<option value="138">138 lbs. (62.6 kg)</option>
+<option value="139">139 lbs. (63.0 kg)</option>
+<option value="140">140 lbs. (63.5 kg)</option>
+<option value="141">141 lbs. (64.0 kg)</option>
+<option value="142">142 lbs. (64.4 kg)</option>
+<option value="143">143 lbs. (64.9 kg)</option>
+<option value="144">144 lbs. (65.3 kg)</option>
+<option value="145">145 lbs. (65.8 kg)</option>
+<option value="146">146 lbs. (66.2 kg)</option>
+<option value="147">147 lbs. (66.7 kg)</option>
+<option value="148">148 lbs. (67.1 kg)</option>
+<option value="149">149 lbs. (67.6 kg)</option>
+<option value="150">150 lbs. (68.0 kg)</option>
+<option value="151">151 lbs. (68.5 kg)</option>
+<option value="152">152 lbs. (68.9 kg)</option>
+<option value="153">153 lbs. (69.4 kg)</option>
+<option value="154">154 lbs. (69.9 kg)</option>
+<option value="155">155 lbs. (70.3 kg)</option>
+<option value="156">156 lbs. (70.8 kg)</option>
+<option value="157">157 lbs. (71.2 kg)</option>
+<option value="158">158 lbs. (71.7 kg)</option>
+<option value="159">159 lbs. (72.1 kg)</option>
+<option value="160">160 lbs. (72.6 kg)</option>
+<option value="161">161 lbs. (73.0 kg)</option>
+<option value="162">162 lbs. (73.5 kg)</option>
+<option value="163">163 lbs. (73.9 kg)</option>
+<option value="164">164 lbs. (74.4 kg)</option>
+<option value="165" selected>165 lbs. (74.8 kg)</option>
+<option value="166">166 lbs. (75.3 kg)</option>
+<option value="167">167 lbs. (75.7 kg)</option>
+<option value="168">168 lbs. (76.2 kg)</option>
+<option value="169">169 lbs. (76.7 kg)</option>
+<option value="170">170 lbs. (77.1 kg)</option>
+<option value="171">171 lbs. (77.6 kg)</option>
+<option value="172">172 lbs. (78.0 kg)</option>
+<option value="173">173 lbs. (78.5 kg)</option>
+<option value="174">174 lbs. (78.9 kg)</option>
+<option value="175">175 lbs. (79.4 kg)</option>
+<option value="176">176 lbs. (79.8 kg)</option>
+<option value="177">177 lbs. (80.3 kg)</option>
+<option value="178">178 lbs. (80.7 kg)</option>
+<option value="179">179 lbs. (81.2 kg)</option>
+<option value="180">180 lbs. (81.6 kg)</option>
+<option value="181">181 lbs. (82.1 kg)</option>
+<option value="182">182 lbs. (82.6 kg)</option>
+<option value="183">183 lbs. (83.0 kg)</option>
+<option value="184">184 lbs. (83.5 kg)</option>
+<option value="185">185 lbs. (83.9 kg)</option>
+<option value="186">186 lbs. (84.4 kg)</option>
+<option value="187">187 lbs. (84.8 kg)</option>
+<option value="188">188 lbs. (85.3 kg)</option>
+<option value="189">189 lbs. (85.7 kg)</option>
+<option value="190">190 lbs. (86.2 kg)</option>
+<option value="191">191 lbs. (86.6 kg)</option>
+<option value="192">192 lbs. (87.1 kg)</option>
+<option value="193">193 lbs. (87.5 kg)</option>
+<option value="194">194 lbs. (88.0 kg)</option>
+<option value="195">195 lbs. (88.5 kg)</option>
+<option value="196">196 lbs. (88.9 kg)</option>
+<option value="197">197 lbs. (89.4 kg)</option>
+<option value="198">198 lbs. (89.8 kg)</option>
+<option value="199">199 lbs. (90.3 kg)</option>
+<option value="200">200 lbs. (90.7 kg)</option>
+<option value="201">201 lbs. (91.2 kg)</option>
+<option value="202">202 lbs. (91.6 kg)</option>
+<option value="203">203 lbs. (92.1 kg)</option>
+<option value="204">204 lbs. (92.5 kg)</option>
+<option value="205">205 lbs. (93.0 kg)</option>
+<option value="206">206 lbs. (93.4 kg)</option>
+<option value="207">207 lbs. (93.9 kg)</option>
+<option value="208">208 lbs. (94.3 kg)</option>
+<option value="209">209 lbs. (94.8 kg)</option>
+<option value="210">210 lbs. (95.3 kg)</option>
+<option value="211">211 lbs. (95.7 kg)</option>
+<option value="212">212 lbs. (96.2 kg)</option>
+<option value="213">213 lbs. (96.6 kg)</option>
+<option value="214">214 lbs. (97.1 kg)</option>
+<option value="215">215 lbs. (97.5 kg)</option>
+<option value="216">216 lbs. (98.0 kg)</option>
+<option value="217">217 lbs. (98.4 kg)</option>
+<option value="218">218 lbs. (98.9 kg)</option>
+<option value="219">219 lbs. (99.3 kg)</option>
+<option value="220">220 lbs. (99.8 kg)</option>
+<option value="221">221 lbs. (100.2 kg)</option>
+<option value="222">222 lbs. (100.7 kg)</option>
+<option value="223">223 lbs. (101.2 kg)</option>
+<option value="224">224 lbs. (101.6 kg)</option>
+<option value="225">225 lbs. (102.1 kg)</option>
+<option value="226">226 lbs. (102.5 kg)</option>
+<option value="227">227 lbs. (103.0 kg)</option>
+<option value="228">228 lbs. (103.4 kg)</option>
+<option value="229">229 lbs. (103.9 kg)</option>
+<option value="230">230 lbs. (104.3 kg)</option>
+<option value="231">231 lbs. (104.8 kg)</option>
+<option value="232">232 lbs. (105.2 kg)</option>
+<option value="233">233 lbs. (105.7 kg)</option>
+<option value="234">234 lbs. (106.1 kg)</option>
+<option value="235">235 lbs. (106.6 kg)</option>
+<option value="236">236 lbs. (107.0 kg)</option>
+<option value="237">237 lbs. (107.5 kg)</option>
+<option value="238">238 lbs. (108.0 kg)</option>
+<option value="239">239 lbs. (108.4 kg)</option>
+<option value="240">240 lbs. (108.9 kg)</option>
+<option value="241">241 lbs. (109.3 kg)</option>
+<option value="242">242 lbs. (109.8 kg)</option>
+<option value="243">243 lbs. (110.2 kg)</option>
+<option value="244">244 lbs. (110.7 kg)</option>
+<option value="245">245 lbs. (111.1 kg)</option>
+<option value="246">246 lbs. (111.6 kg)</option>
+<option value="247">247 lbs. (112.0 kg)</option>
+<option value="248">248 lbs. (112.5 kg)</option>
+<option value="249">249 lbs. (112.9 kg)</option>
+<option value="250">250 lbs. (113.4 kg)</option>
+<option value="251">251 lbs. (113.9 kg)</option>
+<option value="252">252 lbs. (114.3 kg)</option>
+<option value="253">253 lbs. (114.8 kg)</option>
+<option value="254">254 lbs. (115.2 kg)</option>
+<option value="255">255 lbs. (115.7 kg)</option>
+<option value="256">256 lbs. (116.1 kg)</option>
+<option value="257">257 lbs. (116.6 kg)</option>
+<option value="258">258 lbs. (117.0 kg)</option>
+<option value="259">259 lbs. (117.5 kg)</option>
+<option value="260">260 lbs. (117.9 kg)</option>
+<option value="261">261 lbs. (118.4 kg)</option>
+<option value="262">262 lbs. (118.8 kg)</option>
+<option value="263">263 lbs. (119.3 kg)</option>
+<option value="264">264 lbs. (119.7 kg)</option>
+<option value="265">265 lbs. (120.2 kg)</option>
+<option value="270">270 lbs. (122.5 kg)</option>
+<option value="275">275 lbs. (124.7 kg)</option>
+<option value="280">280 lbs. (127.0 kg)</option>
+<option value="285">285 lbs. (129.3 kg)</option>
+<option value="290">290 lbs. (131.5 kg)</option>
+<option value="295">295 lbs. (133.8 kg)</option>
+<option value="300">300 lbs. (136.1 kg)</option>
+<option value="335">325 lbs. (147.4 kg)</option>
+<option value="350">350 lbs. (158.7 kg)</option>
+<option value="375">375 lbs. (170.0 kg)</option>
+<option value="400">400 lbs. (181.4 kg)</option>
+<option value="450">450 lbs. (204.1 kg)</option>
+<option value="500">500 lbs. (226.8 kg)</option>
+<option value="550">550 lbs. (249.5 kg)</option>
+<option value="600">600 lbs. (272.1 kg)</option>
+<option value="650">650 lbs. (294.8 kg)</option>
+</select>
+</p>
+
+<p class="custom">Speed:&nbsp;<select id="ovrdSpeed" name="ovrdSpeed">
+<option value="10">10 feet</option>
+<option value="15">15 feet</option>
+<option value="20">20 feet</option>
+<option value="25">25 feet</option>
+<option value="30" selected>30 feet</option>
+<option value="35">35 feet</option>
+<option value="40">40 feet</option>
+<option value="45">45 feet</option>
+<option value="50">50 feet</option>
+</select></p>
+
+<p class="custom">Vision:&nbsp;<select id="ovrdVision" name="ovrdVision">
+<option value="0" selected>select...</option>
+<option value="0">No darkvision</option>
+<option value="60">Darkvision 60 feet</option>
+<option value="120">Darkvision 120 feet</option>
+</select></p>
+
+<p class="custom">New/Unique&nbsp;Language(s)...<br /><input type="text" size="25" name="ovrdLang" /></p>
+
+</td><td valign="top" align="left">
+
+<p class="custom">Racial&nbsp;Trait&nbsp;#1:&nbsp;<input type="text" size="30" id="ovrdRacialTrait01" name="ovrdRacialTrait01" /></p>
+<p class="custom">Racial&nbsp;Trait&nbsp;#2:&nbsp;<input type="text" size="30" id="ovrdRacialTrait02" name="ovrdRacialTrait02" /></p>
+<p class="custom">Racial&nbsp;Trait&nbsp;#3:&nbsp;<input type="text" size="30" id="ovrdRacialTrait03" name="ovrdRacialTrait03" /></p>
+<p class="custom">Racial&nbsp;Trait&nbsp;#4:&nbsp;<input type="text" size="30" id="ovrdRacialTrait04" name="ovrdRacialTrait04" /></p>
+<p class="custom">Racial&nbsp;Trait&nbsp;#5:&nbsp;<input type="text" size="30" id="ovrdRacialTrait05" name="ovrdRacialTrait05" /></p>
+<p class="custom"> Add&nbsp;Prof.&nbsp;In...&nbsp;<select id="ovrdProf01" name="ovrdProf01">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select></p>
+<p class="custom"> Add&nbsp;Prof.&nbsp;In...&nbsp;<select id="ovrdProf02" name="ovrdProf02">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select></p>
+<p class="custom"> Add&nbsp;Prof.&nbsp;In...&nbsp;<select id="ovrdProf03" name="ovrdProf03">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select></p>
+<p class="custom"> Add&nbsp;Prof.&nbsp;In...&nbsp;<select id="ovrdProf04" name="ovrdProf04">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select></p>
+</td></tr>
+</table>
+
+</td></tr>
+<tr><td colspan="2" align="center"><hr /></td></tr>
+
+<tr><td colspan="2" align="center"><strong>C&nbsp;U&nbsp;S&nbsp;T&nbsp;O&nbsp;M&nbsp; &nbsp;S&nbsp;U&nbsp;B&nbsp;C&nbsp;L&nbsp;A&nbsp;S&nbsp;S</strong></td></tr>
+<tr><td colspan="2" align="center" style="padding: 0 25px 10px 25px;">Cleric the voice of a newly revealed domain? Warlock bound to an even more exotic entity? Use the fields below to describe subclass features from another source or homebrew option. 
+<br />This option replaces the single Class selection made above.</td></tr>
+<tr><td colspan="2" align="center"><p class="custom"><strong><big>Subclass&nbsp;Name:</big></strong> <input type="text" size="35" name="custSubclassName" /><br /><em><strong>Note:</strong> A new Subclass name is needed to use the fields below.</em></td></tr>
+<td align="right"><select name="customclass" tabindex="8">
+<option value="0" selected>Base Core Class...</option>
+<option value="ArtificerOther">Artificer (Custom Subclass)</option>
+<option value="BarbarianOther">Barbarian (Custom Subclass)</option>
+<option value="BardOther">Bard (Custom Subclass)</option>
+<option value="ClericOther">Cleric (Custom Subclass)</option>
+<option value="DruidOther">Druid (Custom Subclass)</option>
+<option value="FighterOtherDEX">Fighter (Other Subclass, Dexterity-based)</option>
+<option value="FighterOtherSTR">Fighter (Other Subclass, Strength-based)</option>
+<option value="MonkOther">Monk (Custom Subclass)</option>
+<option value="PaladinOther">Paladin (Custom Subclass)</option>
+<option value="RangerOther">Ranger (Custom Subclass)</option>
+<option value="RogueOther">Rogue (Custom Subclass)</option>
+<option value="SorcererOther">Sorcerer (Custom Subclass)</option>
+<option value="WarlockOther">Warlock (Custom Subclass)</option>
+<option value="WizardOther">Wizard (Custom Subclass)</option>
+</select></td>
+<td align="left"><select name="customlevel"> 
+<option value="0" selected>Level...</option>
+<option value="1">Level 1 (0 x.p.)</option>
+<option value="2">Level 2 (300 x.p.)</option>
+<option value="3">Level 3 (900 x.p.)</option>
+<option value="4">Level 4 (2,700 x.p.)</option>
+<option value="5">Level 5 (6,500 x.p.)</option>
+<option value="6">Level 6 (14,000 x.p.)</option>
+<option value="7">Level 7 (23,000 x.p.)</option>
+<option value="8">Level 8 (34,000 x.p.)</option>
+<option value="9">Level 9 (48,000 x.p.)</option>
+<option value="10">Level 10 (64,000 x.p.)</option>
+<option value="11">Level 11 (85,000 x.p.)</option>
+<option value="12">Level 12 (100,000 x.p.)</option>
+<option value="13">Level 13 (120,000 x.p.)</option>
+<option value="14">Level 14 (140,000 x.p.)</option>
+<option value="15">Level 15 (165,000 x.p.)</option>
+<option value="16">Level 16 (195,000 x.p.)</option>
+<option value="17">Level 17 (225,000 x.p.)</option>
+<option value="18">Level 18 (265,000 x.p.)</option>
+<option value="19">Level 19 (305,000 x.p.)</option>
+<option value="20">Level 20 (355,000 or more x.p.)</option>
+</select></td>
+</tr>
+<tr><td colspan="2" align="center">Describe subclass features by level.<br />
+<textarea cols="50" rows="6" name="custSubclassDescp"></textarea></td></tr>
+<tr><td colspan="2" align="center" style="padding: 0 40px 5px 40px;">
+<em>Changes that affect automatic calculations of default rules (different ability modifiers, new saving throw proficiencies, and so forth) need to be noted here.</em><br />
+</td></tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+<tr><td colspan="2" align="center"><strong>C&nbsp;U&nbsp;S&nbsp;T&nbsp;O&nbsp;M&nbsp; &nbsp;B&nbsp;A&nbsp;C&nbsp;K&nbsp;G&nbsp;R&nbsp;O&nbsp;U&nbsp;N&nbsp;D</strong></td></tr>
+<tr><td colspan="2" align="center" style="padding: 0 25px 10px 25px;">Adventurers arise from all sorts of places and circumstances. Use the fields below to describe a background from another source or homebrew option.</td></tr>
+<tr><td colspan="2" align="center"><p class="custom"><strong><big>Background&nbsp;Name:</big></strong> <input type="text" size="35" name="customBkdgd" /><br /><em><strong>Note:</strong> A new Background name is needed to use the fields below.</em></td></tr>
+<tr><td colspan="2" align="center">
+
+<p class="custom">Add proficiencies in the following...</p>
+
+<p class="custom"><select id="custbkgProf01" name="custbkgProf01">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A VEHICLE TYPE --</option>
+<option value="vehicleair">Vehicles (Air)</option>
+<option value="vehicleauto">Vehicles (Automobiles)</option>
+<option value="vehicleland">Vehicles (Land)</option>
+<option value="vehiclespelljammer">Vehicles (Space/Spelljammers)</option>
+<option value="vehiclestarship">Vehicles (Space/Starships)</option>
+<option value="vehiclewater">Vehicles (Water)</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select>
+&nbsp;
+<select id="custbkgProf02" name="custbkgProf02">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A VEHICLE TYPE --</option>
+<option value="vehicleair">Vehicles (Air)</option>
+<option value="vehicleauto">Vehicles (Automobiles)</option>
+<option value="vehicleland">Vehicles (Land)</option>
+<option value="vehiclespelljammer">Vehicles (Space/Spelljammers)</option>
+<option value="vehiclestarship">Vehicles (Space/Starships)</option>
+<option value="vehiclewater">Vehicles (Water)</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select></p>
+<p class="custom"><select id="custbkgProf03" name="custbkgProf03">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A VEHICLE TYPE --</option>
+<option value="vehicleair">Vehicles (Air)</option>
+<option value="vehicleauto">Vehicles (Automobiles)</option>
+<option value="vehicleland">Vehicles (Land)</option>
+<option value="vehiclespelljammer">Vehicles (Space/Spelljammers)</option>
+<option value="vehiclestarship">Vehicles (Space/Starships)</option>
+<option value="vehiclewater">Vehicles (Water)</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select>
+&nbsp;
+<select id="custbkgProf04" name="custbkgProf04">
+<option value="0" selected>select...</option>
+<option value="0">-- A SKILL --</option>
+<option value="acrobatics">Acrobatics</option>
+<option value="animalhandling">Animal Handling</option>
+<option value="arcana">Arcana</option>
+<option value="athletics">Athletics</option>
+<option value="deception">Deception</option>
+<option value="history">History</option>
+<option value="insight">Insight</option>
+<option value="intimidation">Intimidation</option>
+<option value="investigation">Investigation</option>
+<option value="medicine">Medicine</option>
+<option value="nature">Nature</option>
+<option value="perception">Perception</option>
+<option value="performance">Performance</option>
+<option value="persuasion">Persuasion</option>
+<option value="religion">Religion</option>
+<option value="sleightofhand">Sleight of Hand</option>
+<option value="stealth">Stealth</option>
+<option value="survival">Survival</option>
+<option value="0">-- A TOOL --</option>
+<option value="alchemistssupplies">Alchemist's Supplies</option>
+<option value="brewerssupplies">Brewer's Supplies</option>
+<option value="calligrapherssupplies">Calligrapher's Supplies</option>
+<option value="carpenterstools">Carpenter's Tools</option>
+<option value="cartographerstools">Cartographer's Tools</option>
+<option value="cobblerstools">Cobbler's Tools</option>
+<option value="cooksutensils">Cook's Utensils</option>
+<option value="disguisekit">Disguise Kit</option>
+<option value="forgerykit">Forgery Kit</option>
+<option value="gamingdiceset">Gaming (Dice Set)</option>
+<option value="gamingdragonchess">Gaming (Dragonchess)</option>
+<option value="gamingplayingcards">Gaming (Playing Cards)</option>
+<option value="gamingthreedragonante">Gaming (Three Dragon Ante)</option>
+<option value="glassblowerstools">Glassblower's Tools</option>
+<option value="herbalismkit">Herbalism Kit</option>
+<option value="jewelerstools">Jeweler's Tools</option>
+<option value="leatherworkerstools">Leatherworker's Tools</option>
+<option value="masonstools">Mason's Tools</option>
+<option value="musicinstbagpipes">Music Inst. (Bagpipes)</option>
+<option value="musicinstdrum">Music Inst. (Drum)</option>
+<option value="musicinstdulcimer">Music Inst. (Dulcimer)</option>
+<option value="musicinstflute">Music Inst. (Flute)</option>
+<option value="musicinsthorn">Music Inst. (Horn)</option>
+<option value="musicinstlute">Music Inst. (Lute)</option>
+<option value="musicinstlyre">Music Inst. (Lyre)</option>
+<option value="musicinstpanflute">Music Inst. (Pan Flute)</option>
+<option value="musicinstshawm">Music Inst. (Shawm)</option>
+<option value="musicinstviol">Music Inst. (Viol)</option>
+<option value="navigatorstools">Navigator's Tools</option>
+<option value="painterssupplies">Painter's Supplies</option>
+<option value="poisonerskit">Poisoner's Kit</option>
+<option value="potterstools">Potter's Tools</option>
+<option value="smithstools">Smith's Tools</option>
+<option value="tinkerstools">Tinker's Tools</option>
+<option value="weaverstools">Weaver's Tools</option>
+<option value="woodcarverstools">Woodcarver's Tools</option>
+<option value="thievestools">Thieves' Tools</option>
+<option value="0">-- A VEHICLE TYPE --</option>
+<option value="vehicleair">Vehicles (Air)</option>
+<option value="vehicleauto">Vehicles (Automobiles)</option>
+<option value="vehicleland">Vehicles (Land)</option>
+<option value="vehiclespelljammer">Vehicles (Space/Spelljammers)</option>
+<option value="vehiclestarship">Vehicles (Space/Starships)</option>
+<option value="vehiclewater">Vehicles (Water)</option>
+<option value="0">-- A LANGUAGE --</option>
+<option value="dwarvish">Dwarvish</option>
+<option value="elvish">Elvish</option>
+<option value="giant">Giant</option>
+<option value="gnomish">Gnomish</option>
+<option value="goblin">Goblin</option>
+<option value="halfling">Halfling</option>
+<option value="orc">Orc</option>
+<option value="abyssal">Abyssal</option>
+<option value="celestial">Celestial</option>
+<option value="draconic">Draconic</option>
+<option value="deepspeech">Deep Speech</option>
+<option value="infernal">Infernal</option>
+<option value="primordial">Primordial</option>
+<option value="sylvan">Sylvan</option>
+<option value="undercommon">Undercommon</option>
+<option value="druidic">Druidic</option>
+<option value="0">-- A WEAPON --</option>
+<option value="battleaxe">Battleaxe</option>
+<option value="blowgun">Blowgun</option>
+<option value="club">Club</option>
+<option value="crossbowhand">Crossbow, Hand</option>
+<option value="crossbowheavy">Crossbow, Heavy</option>
+<option value="crossbowligâ ht">Crossbow, Light</option>
+<option value="dagger">Dagger</option>
+<option value="dart">Dart</option>
+<option value="flail">Flail</option>
+<option value="glaive">Glaive</option>
+<option value="greataxe">Greataxe</option>
+<option value="greatclub">Greatclub</option>
+<option value="greatsword">Greatsword</option>
+<option value="halberd">Halberd</option>
+<option value="handaxe">Handaxe</option>
+<option value="javelin">Javelin</option>
+<option value="lance">Lance</option>
+<option value="ligâ hthamâ mer">Light Hammer</option>
+<option value="longbow">Longbow</option>
+<option value="longsword">Longsword</option>
+<option value="mace">Mace</option>
+<option value="maul">Maul</option>
+<option value="morningstar">Morningstar</option>
+<option value="net">Net</option>
+<option value="pike">Pike</option>
+<option value="quarterstaff">Quarterstaff</option>
+<option value="rapier">Rapier</option>
+<option value="scimitar">Scimitar</option>
+<option value="shortbow">Shortbow</option>
+<option value="shortsword">Shortsword</option>
+<option value="sickle">Sickle</option>
+<option value="sling">Sling</option>
+<option value="spear">Spear</option>
+<option value="trident">Trident</option>
+<option value="warpick">War Pick</option>
+<option value="warhammer">Warhammer</option>
+<option value="whip">Whip</option>
+</select></p>
+</td></tr>
+<tr><td colspan="2" align="center"><p class="custom"><strong>Background&nbsp;Feature:</strong> <input type="text" size="35" name="custBkgndFeature" /></td></tr>
+<tr><td colspan="2" align="center">Describe background features benefits.<br />
+<textarea cols="50" rows="6" name="custBkgndDescp"></textarea></td></tr>
+
+<tr><td colspan="2" align="center"><hr /></td></tr>
+
+<tr>
+<td colspan="2" align="center" ><input class="subbtn" type="submit" name="submit" value="CLICK TO CREATE WITH CUSTOM OPTIONS" tabindex="14" /></td>
+</tr>
+
+</form></table>
+</div>
+
